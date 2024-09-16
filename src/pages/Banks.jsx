@@ -84,7 +84,7 @@ export const Banks = () => {
                   "Authorization": `Bearer ${localStorage.getItem('vito')}`
                }
             })
-            
+
             setBanks(res.data);
          } catch (err) {
             console.error(err);
@@ -113,8 +113,8 @@ export const Banks = () => {
 
    return (
       <div className='table-container'>
-         <button className='btn' style={{ position: 'absolute',background:'black',zIndex:9099 }} onClick={insert}>insert banks</button>
-         <Table headers={TABLE_HEADERS.banks} rows={banks} />
+         {/* <button className='btn' style={{ position: 'absolute',background:'black',zIndex:9099 }} onClick={insert}>insert banks</button> */}
+         <Table headers={TABLE_HEADERS.banks} rows={banksData} />
       </div>
    );
 };
