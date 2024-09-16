@@ -1,5 +1,5 @@
-import HOME_HEADERS from './HOME_HEADERS.json'
+import TABLE_HEADERS from './tables/HEADERS.json'
 
 export {
-   HOME_HEADERS
+   TABLE_HEADERS
 }

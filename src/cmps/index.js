@@ -3,6 +3,10 @@ import { Main } from './Main.jsx'
 import { Footer } from './Footer.jsx'
 import { Msg } from './Msg.jsx'
 
+// AUTH
+import { Register } from './auth/Register.jsx'
+import { Login } from './auth/Login.jsx'
+
 // TABLE
 import { Table } from './table/Table.jsx'
 import { Thead } from './table/Thead.jsx'
@@ -14,14 +18,19 @@ import { Remove } from './table/cells/Remove.jsx'
 import { Select } from './table/cells/Select.jsx'
 import { DropDown } from './table/cells/DropDown.jsx'
 
-// appoinment
-import { Form } from '../pages/Form.jsx'
+// DIALOG
+import { Dialogs } from './dialogs/Dialogs.jsx'
+import { Details } from './dialogs/Details.jsx'
 
 export {
    Msg,
    Header,
    Main,
    Footer,
+   // AUTH
+   Register,
+   Login,
+   // TABLE
    Table,
    Thead,
    Tbody,
@@ -31,5 +40,7 @@ export {
    DropDown,
    Remove,
    Select,
-   Form,
+   // DIALOGS
+   Dialogs,
+   Details
 }

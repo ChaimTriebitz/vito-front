@@ -1,9 +1,9 @@
 import { Home } from './Home.jsx';
 import { Form } from './Form.jsx';
-import { Appointments } from './Appointments.jsx';
+import { Banks } from './Banks.jsx';
 
 export {
    Home,
-   Appointments,
-   Form
+   Form,
+   Banks
 }

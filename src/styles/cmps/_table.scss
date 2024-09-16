@@ -12,17 +12,28 @@ table {
    height: fit-content;
 }
 
-tbody tr {
-   background: $c1;
-   position: relative;
-}
-
 thead {
    position: sticky;
    top: 0;
    z-index: 1;
-   background: $c4;
+   background: $c5;
+   color: $c4;
+   font-weight: 500;
+   font-size: 1.2em;
 }
+
+tbody tr {
+   background: rgb(0, 28, 48);
+   position: relative;
+   &:nth-child(odd){
+      background: rgb(10, 38, 58);
+   }
+   p{
+   font-size: 0.85em;
+   }
+}
+
+
 
 
 th,

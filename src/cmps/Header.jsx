@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/imgs/chagai.webp';
+import logo from '../assets/imgs/logo-vito.png';
 
 const links = [
    { name: 'Home', link: '/' },
-   { name: 'Customer', link: '/customer' },
-   { name: 'Appointments', link: '/appointments' },
+   { name: 'Banks', link: '/banks' },
 ]
 
 export const Header = () => {
