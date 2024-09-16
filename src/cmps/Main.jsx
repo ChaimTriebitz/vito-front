@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import {  Banks, Home } from '../pages'
+import { Banks, Home } from '../pages'
 import { Form } from '../pages/Form'
 import { useGlobalState } from '../hooks'
 import { useEffect } from 'react'
@@ -19,11 +19,12 @@ export const Main = () => {
    // }, [loggedInUser])
    return (
       <main className='main cmp'>
-         <Routes>
+         {/* <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/banks' element={<Banks />} />
             <Route path='/customer' element={< Form />} />
-         </Routes>
+         </Routes> */}
+         <Banks />
       </main>
    )
 }
