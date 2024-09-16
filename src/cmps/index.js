@@ -17,10 +17,11 @@ import { Date } from './table/cells/Date.jsx'
 import { Remove } from './table/cells/Remove.jsx'
 import { Select } from './table/cells/Select.jsx'
 import { DropDown } from './table/cells/DropDown.jsx'
+import { Details } from './table/cells/Details.jsx'
+import { Actions } from './table/cells/Actions.jsx'
 
 // DIALOG
 import { Dialogs } from './dialogs/Dialogs.jsx'
-import { Details } from './dialogs/Details.jsx'
 
 export {
    Msg,
@@ -40,7 +41,8 @@ export {
    DropDown,
    Remove,
    Select,
+   Details,
+   Actions,
    // DIALOGS
    Dialogs,
-   Details
 }

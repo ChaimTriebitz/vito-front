@@ -1,6 +1,18 @@
 {
    "banks": [
       {
+         "name": "Actions",
+         "cell_type": "actions",
+         "headers": [
+            {
+               "cell_type": "select"
+            },
+            {
+               "cell_type": "details"
+            }
+         ]
+      },
+      {
          "name": "Bank",
          "internal_name": "bank",
          "cell_type": "text"
@@ -52,6 +64,5 @@
          "internal_name": "website",
          "cell_type": "text"
       }
-
    ]
 }
