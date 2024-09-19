@@ -1,4 +1,4 @@
-import { Date, DropDown, Remove, Select, Text, Details } from '..'
+import { Date, DropDown, Remove, Select, Text, Details, Actions } from '..'
 
 export const Cells = ({ row, header }) => {
    switch (header.cell_type) {
@@ -8,5 +8,6 @@ export const Cells = ({ row, header }) => {
       case 'dropDown': return <DropDown row={row} header={header} />
       case 'text': return <Text row={row} header={header} />
       case 'date': return <Date row={row} header={header} />
+      case 'actions': return <Actions row={row} header={header} />
    }
 }

@@ -1,11 +1,13 @@
 import { Cells } from '../Cells'
 
 
-export const Actions = ({ row, field }) => {
+export const Actions = ({ row, header }) => {
+   console.log(header);
+   
    return (
       <div className='actions'>
          {
-            field.headers.map((header, i) =>
+            header.headers.map((header, i) =>
                <Cells
                   key={i}
                   row={row}

@@ -2,7 +2,6 @@ import React from 'react'
 import { Thead, Tbody } from '../../cmps';
 
 export const Table = ({ headers, rows }) => {
-   console.log(headers);
 
    return (
       <table>

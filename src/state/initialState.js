@@ -1,5 +1,6 @@
 export const initialState = {
    page: 'home',
    loggedInUser: null,
-   dialogs: {}
+   dialogs: {},
+   selectedIds: [],
 }

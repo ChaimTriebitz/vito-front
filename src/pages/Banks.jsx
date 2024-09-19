@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Table } from '../cmps';
 import { TABLE_HEADERS } from '../data';
 
-const banksData = [
+const rows = [
    {
      "bank": "Investors Bank",
      "contact": "Richard H. Freund",
@@ -96,7 +96,7 @@ export const Banks = () => {
 
    const insert = async () => {
       try {
-         const { data } = await axios.post(`http://localhost:5000/api/banks/createMany`, { data: banksData }, {
+         const { data } = await axios.post(`http://localhost:5000/api/banks/createMany`, { data: rows }, {
             headers: {
                "Content-Type": "application/json",
                "Authorization": `Bearer ${localStorage.getItem('vito')}`
@@ -114,7 +114,7 @@ export const Banks = () => {
    return (
       <div className='table-container'>
          {/* <button className='btn' style={{ position: 'absolute',background:'black',zIndex:9099 }} onClick={insert}>insert banks</button> */}
-         <Table headers={TABLE_HEADERS.banks} rows={banksData} />
+         <Table headers={TABLE_HEADERS.banks} rows={rows} />
       </div>
    );
 };

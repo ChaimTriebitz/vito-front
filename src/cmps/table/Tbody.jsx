@@ -10,11 +10,7 @@ export const Tbody = ({ headers, rows }) => {
                   {
                      headers.map((header) => <td key={header.name}><Cells header={header} row={row} /></td>)
                   }
-                  {/* <td>{row.customerName}</td>
-                  <td>{new Date(row.date).toLocaleDateString()}</td>
-                  <td>{row.time}</td>
-                  <td>{row.barber}</td>
-                  <td>{row.service}</td> */}
+                  
                </tr>
             ))
          }
