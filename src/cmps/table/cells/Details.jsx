@@ -2,7 +2,8 @@ import { svgs } from '../../../assets/svgs'
 import { useGlobalState } from '../../../hooks'
 import { ACTIONS } from '../../../state'
 
-export const Details = ({ row, field }) => {
+export const Details = ({ row, header }) => {
+console.log(header);
 
    const { dispatch } = useGlobalState()
 
@@ -11,7 +12,7 @@ export const Details = ({ row, field }) => {
          type: ACTIONS.OPEN_DIALOG,
          entity: 'details',
          payload: {
-            field,
+            header,
             row
          }
       })
