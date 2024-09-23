@@ -1,13 +1,11 @@
 import { useRef, useState } from 'react'
+import { useUpdateEffect } from './useUpdateEffect'
 import { objects } from '../functions'
-import { useUpdateEffect } from '../hooks'
+export const useChangedValues = (values) => {
 
-export const useForm = (initValues) => {
-
-   const [values, setValues] = useState(initValues)
    const [changedValues, setChangedValues] = useState({})
 
-   const initValuesRef = useRef(initValues)
+   const initValuesRef = useRef(values)
 
    const restart = (val) => {
       initValuesRef.current = val
@@ -17,14 +15,10 @@ export const useForm = (initValues) => {
    useUpdateEffect(() => {
       setChangedValues(objects.getChangedProperties(initValuesRef.current, values))
    }, [values])
-   const handelChange = (e) => setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }))
 
    return {
-      values,
-      handelChange,
       changedValues,
-      restart,
-      isValuesChanged: !objects.isEmpty(changedValues)
+      isValuesChanged: !objects.isEmpty(changedValues),
+      restart
    }
-
 }

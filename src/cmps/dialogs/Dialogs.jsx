@@ -1,4 +1,4 @@
-import { Details, Login } from '../../cmps'
+import {  DetailsDialog, Login } from '../../cmps'
 import { useGlobalState } from '../../hooks'
 
 export const Dialogs = () => {
@@ -6,7 +6,7 @@ export const Dialogs = () => {
 
    return (
       <>
-         {dialogs.details?.isOpen && <Details />}
+         {dialogs.details?.isOpen && <DetailsDialog />}
          {dialogs.login?.isOpen && <Login />}
          {/* {dialogs.history?.isOpen && <HistoryDialog />} */}
          {/* {dialogs.notes?.isOpen && <NotesDialog />} */}

@@ -31,11 +31,27 @@ export const Register = () => {
       <div className='register auth-form'>
          <form className='form' onSubmit={handleSubmit}>
             <label htmlFor="name">name</label>
-            <input id='name' name='username' value={credentials.username} onChange={handleChange} />
+            <input
+               id='name'
+               name='username'
+               value={credentials.username}
+               onChange={handleChange}
+            />
             <label htmlFor="email">email</label>
-            <input id='email' type="email" name='email' value={credentials.email} onChange={handleChange} />
+            <input
+               id='email'
+               type="email"
+               name='email'
+               value={credentials.email}
+               onChange={handleChange}
+            />
             <label htmlFor="password">password</label>
-            <input id='password' name='password' value={credentials.password} onChange={handleChange} />
+            <input
+               id='password'
+               name='password'
+               value={credentials.password}
+               onChange={handleChange}
+            />
             <button>submit</button>
          </form>
          <Link to='/login'>Login</Link>

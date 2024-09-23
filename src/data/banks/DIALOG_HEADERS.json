@@ -1,0 +1,13 @@
+[
+   {
+      "name": "Territories",
+      "internal_name": "territories",
+      "element": "input",
+      "type": "text"
+   },
+   {
+      "name": "Website",
+      "internal_name": "website",
+      "element": "input"
+   }
+]

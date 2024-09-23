@@ -3,7 +3,6 @@ import { useGlobalState } from '../../../hooks'
 import { ACTIONS } from '../../../state'
 
 export const Details = ({ row, header }) => {
-console.log(header);
 
    const { dispatch } = useGlobalState()
 

@@ -5,7 +5,6 @@ import { ACTIONS } from '../state';
 export const useLogInUser = () => {
    const { dispatch } = useGlobalState()
    return async () => {
-      console.log('blocking');
       try {
          const { data } = await axios.get(`http://localhost:5000/api/private`, {
             headers: {

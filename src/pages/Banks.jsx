@@ -73,7 +73,6 @@ const rows = [
 
 export const Banks = () => {
    const [banks, setBanks] = useState([]);
-   console.log(banks);
 
    useEffect(() => {
       const getBanks = async () => {
@@ -114,7 +113,7 @@ export const Banks = () => {
    return (
       <div className='table-container'>
          {/* <button className='btn' style={{ position: 'absolute',background:'black',zIndex:9099 }} onClick={insert}>insert banks</button> */}
-         <Table headers={TABLE_HEADERS.banks} rows={rows} />
+         <Table headers={TABLE_HEADERS} rows={rows} />
       </div>
    );
 };

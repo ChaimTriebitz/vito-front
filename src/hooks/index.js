@@ -7,10 +7,12 @@ import { useDialog } from './useDialog.js'
 import { useKeyPress } from './useKeyPress.js'
 import { useForm } from './useForm.js'
 import { useBlur } from './useBlur.js'
+import { useChangedValues } from './useChangedValues.js'
 
 
 
 export {
+   useChangedValues,
    useBlur,
    useForm,
    useKeyPress,

@@ -6,7 +6,7 @@ export const Tbody = ({ headers, rows }) => {
       <tbody>
          {
             rows.map((row) => (
-               <tr key={row._id}>
+               <tr key={row._id||Math.random()}>
                   {
                      headers.map((header) => <td key={header.name}><Cells header={header} row={row} /></td>)
                   }

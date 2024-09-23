@@ -20,7 +20,6 @@ export const useDialog = (entity) => {
    }
 
    return {
-      closeDialog,
       dialogRef,
       closeDialog
    }

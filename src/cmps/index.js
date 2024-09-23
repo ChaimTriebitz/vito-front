@@ -2,6 +2,7 @@ import { Header } from './Header.jsx'
 import { Main } from './Main.jsx'
 import { Footer } from './Footer.jsx'
 import { Msg } from './Msg.jsx'
+import { Input } from './Input.jsx'
 
 // AUTH
 import { Register } from './auth/Register.jsx'
@@ -22,6 +23,7 @@ import { Actions } from './table/cells/Actions.jsx'
 
 // DIALOG
 import { Dialogs } from './dialogs/Dialogs.jsx'
+import { DetailsDialog  } from './dialogs/DetailsDialog.jsx'
 
 export {
    Msg,
@@ -42,7 +44,8 @@ export {
    Remove,
    Select,
    Details,
-   Actions,
+   Actions,              
    // DIALOGS
    Dialogs,
+   DetailsDialog,
 }

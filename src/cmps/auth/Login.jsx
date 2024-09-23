@@ -7,8 +7,7 @@ export const Login = () => {
    const data = useGlobalState()
    const { dialogRef, closeDialog } = useDialog('login')
    const { values, handelChange } = useForm({ email: '', password: '' })
-   console.log(data);
-   console.log(values);
+
 
    const login = useLogInUser()
    const [err, setErr] = useState('')
@@ -37,11 +36,11 @@ export const Login = () => {
             </header>
             <main>
                <form className='form' onSubmit={handleSubmit}>
-                  <div className="input-label">
+                  <div className="input">
                      <label htmlFor="email">email</label>
                      <input id='email' type="email" name='email' value={values.email} onChange={handelChange} />
                   </div>
-                  <div className="input-label">
+                  <div className="input">
                      <label htmlFor="password">password</label>
                      <input id='password' name='password' value={values.password} onChange={handelChange} />
                   </div>
