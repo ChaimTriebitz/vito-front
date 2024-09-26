@@ -1,0 +1,15 @@
+.actions-bar {
+   padding: 1em;
+   background: $c1;
+
+   select {
+      color: white;
+      background: $c5;
+      padding: 0.25em ;
+      border-radius: 15px;
+      font-size: 1.1em;
+      font-weight: 400;
+      min-height: 25px;
+
+   }
+}

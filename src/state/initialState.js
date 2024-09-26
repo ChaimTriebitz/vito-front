@@ -3,4 +3,7 @@ export const initialState = {
    loggedInUser: null,
    dialogs: {},
    selectedIds: [],
+   filters: {
+      category: '',
+   },
 }

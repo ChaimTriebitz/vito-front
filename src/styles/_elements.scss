@@ -129,11 +129,11 @@ dialog::backdrop {
 }
 
 ::-webkit-scrollbar-track {
-   background: $c1;
+   background: $c2;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: $c2;
+   background: $c1;
    border-radius: 5px;
 }
 

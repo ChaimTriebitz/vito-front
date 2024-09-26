@@ -3,7 +3,8 @@
       "name": "Territories",
       "internal_name": "territories",
       "element": "input",
-      "type": "text"
+      "type": "text",
+      "required": true
    },
    {
       "name": "Website",

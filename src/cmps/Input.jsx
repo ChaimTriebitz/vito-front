@@ -1,12 +1,10 @@
-
-
 export const Input = ({
    field = {},
    value,
    handleChange = () => { },
 }) => {
 
-   const { internal_name, type, name } = field
+   const { internal_name, type, name, required = false } = field
 
    return (
       <div className={`input`} >
@@ -16,6 +14,7 @@ export const Input = ({
             name={internal_name}
             value={value || ''}
             onChange={handleChange}
+            required={required}
          />
       </div>
    )

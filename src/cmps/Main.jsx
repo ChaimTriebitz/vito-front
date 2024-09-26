@@ -17,13 +17,9 @@ export const Main = () => {
    //       dispatch({ type: ACTIONS.CLOSE_DIALOG, entity: 'login' })
    //    }
    // }, [loggedInUser])
+   
    return (
       <main className='main cmp'>
-         {/* <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/banks' element={<Banks />} />
-            <Route path='/customer' element={< Form />} />
-         </Routes> */}
          <Banks />
       </main>
    )

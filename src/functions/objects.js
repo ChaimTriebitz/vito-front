@@ -72,7 +72,6 @@ function getChangedProperties(prev, changed) {
 }
 
 function filterFields(originalObject, keysToInclude = []) {
-   console.log(originalObject,keysToInclude);
    
    const filteredObject = {}
 

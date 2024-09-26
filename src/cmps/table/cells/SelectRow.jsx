@@ -3,7 +3,7 @@ import { useGlobalState } from '../../../hooks'
 
 
 
-export const Select = ({ row }) => {
+export const SelectRow = ({ row }) => {
    const { dispatch, selectedRowsIds } = useGlobalState()
    const [value, setValue] = useState(false)
 

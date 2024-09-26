@@ -1,0 +1,26 @@
+{
+   "categories": {
+      "field": {
+         "internal_name": "categories",
+         "id": "categories",
+         "name": "Categories"
+      },
+      "options": [
+         {
+            "id": 1,
+            "option_display": "category1",
+            "option_value": "category1"
+         },
+         {
+            "id": 2,
+            "option_display": "category2",
+            "option_value": "category2"
+         },
+         {
+            "id": 3,
+            "option_display": "category3",
+            "option_value": "category3"
+         }
+      ]
+   }
+}

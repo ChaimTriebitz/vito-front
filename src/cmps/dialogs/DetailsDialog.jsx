@@ -6,21 +6,19 @@ import { Input } from '../Input';
 import { objects } from '../../functions';
 
 export const DetailsDialog = () => {
-   console.log('Details Dialogs');
+
    const { dialogs } = useGlobalState()
    const { row } = dialogs.details
    const { lender } = row
+
    const { values, handelChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields(row, DIALOG_HEADERS.map(field => field.internal_name)))
-
-
-
-   console.log(isValuesChanged);
-
-
    const { closeDialog, dialogRef, } = useDialog('details')
-   const handleSave = () => {
+
+   const handleSave = (e) => {
+      e.preventDefault()
 
    }
+   
    return (
       <dialog className={`dialog form details`} ref={dialogRef} onClose={closeDialog} >
          <form onSubmit={handleSave} className='dialog-content'>

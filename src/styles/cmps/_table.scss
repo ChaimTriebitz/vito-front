@@ -23,10 +23,10 @@ thead {
 }
 
 tbody tr {
-   background: rgb(0, 28, 48);
+   background: rgba(0, 28, 48, 0.85);
    position: relative;
    &:nth-child(odd){
-      background: rgb(10, 38, 58);
+      background: rgb(0, 28, 48);
    }
    p{
    font-size: 0.85em;
