@@ -9,6 +9,9 @@ export const useDialog = (entity) => {
 
    const { dispatch, dialogs } = useGlobalState()
 
+   console.log(dialogs);
+   
+
    const dialogRef = useBlur(() => dialogRef.current.close(), 'dialog')
 
    useKeyPress(false, 'Escape', () => dialogRef.current.close())
@@ -21,7 +24,7 @@ export const useDialog = (entity) => {
 
    return {
       dialogRef,
-      closeDialog
+      closeDialog,
    }
 
 }

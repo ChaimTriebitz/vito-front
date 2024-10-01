@@ -8,6 +8,9 @@
          },
          {
             "cell_type": "details"
+         },
+         {
+            "cell_type": "remove"
          }
       ]
    },

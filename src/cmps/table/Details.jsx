@@ -1,6 +1,6 @@
-import { svgs } from '../../../assets/svgs'
-import { useGlobalState } from '../../../hooks'
-import { ACTIONS } from '../../../state'
+import { svgs } from '../../assets/svgs'
+import { useGlobalState } from '../../hooks'
+import { ACTIONS } from '../../state'
 
 export const Details = ({ row, header }) => {
 

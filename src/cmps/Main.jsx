@@ -7,16 +7,16 @@ import { ACTIONS } from '../state'
 
 export const Main = () => {
    const { loggedInUser, dispatch } = useGlobalState()
-   // const tok = localStorage.getItem('vito')
+   const tok = localStorage.getItem('vito')
 
-   // useEffect(() => {
-   //    if (!tok) {
-   //       dispatch({ type: ACTIONS.OPEN_DIALOG, entity: 'login' })
-   //    }
-   //    if (tok) {
-   //       dispatch({ type: ACTIONS.CLOSE_DIALOG, entity: 'login' })
-   //    }
-   // }, [loggedInUser])
+   useEffect(() => {
+      if (!tok) {
+         dispatch({ type: ACTIONS.OPEN_DIALOG, entity: 'login' })
+      }
+      if (tok) {
+         dispatch({ type: ACTIONS.CLOSE_DIALOG, entity: 'login' })
+      }
+   }, [loggedInUser])
    
    return (
       <main className='main cmp'>

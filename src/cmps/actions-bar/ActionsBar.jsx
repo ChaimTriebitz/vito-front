@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { Select } from '../cmps'
-import { FILTERS } from '../data'
-import { useGlobalState, useUpdateEffect } from '../hooks'
-import { ACTIONS } from '../state'
+import { useState } from 'react'
+import { useGlobalState, useUpdateEffect } from '../../hooks'
+import { FILTERS } from '../../data'
+import { Select } from '../inputs/Select'
+import { ACTIONS } from '../../state'
+import { AddRow, MultiSelect } from '..'
 
 export const ActionsBar = () => {
    const [value, setValue] = useState('')
@@ -14,7 +15,6 @@ export const ActionsBar = () => {
    useUpdateEffect(() => {
       dispatch({ type: ACTIONS.SET, entity: 'filters', payload: { ...filters, category: value } })
    }, [value])
-console.log(filters);
 
    const { field, options } = FILTERS.categories
    return (
@@ -25,6 +25,7 @@ console.log(filters);
             value={value}
             handleChange={handleChange}
          />
+         <AddRow />
       </div>
    )
 }

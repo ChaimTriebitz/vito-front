@@ -1,8 +1,8 @@
-import { Cells } from '../Cells'
+import { Cells } from './Cells'
 
 
 export const Actions = ({ row, header }) => {
-   
+
    return (
       <div className='actions'>
          {

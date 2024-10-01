@@ -37,5 +37,16 @@
 }
 
 
+@keyframes opencover {
+
+   0% {
+      transform: rotateZ(0deg);
+   }
+
+   100% {
+      transform: rotateZ(33deg);
+   }
+}
+
 
 

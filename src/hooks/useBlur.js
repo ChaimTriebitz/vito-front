@@ -1,21 +1,23 @@
 import { useEffect, useRef } from 'react';
 
-export function useBlur(callback, ignoredClass) {
-  const ref = useRef(null);
+export function useBlur(callback, element) {
 
-  const handleBlur = (e) => {
-    if (ref.current && !ref.current.contains(e.target) && !e.target.closest(`.${ignoredClass}`)) {
-      callback();
-    } else {
-    }
-  };
+   const ref = useRef(null);
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleBlur);
-    return () => {
-      document.removeEventListener('mousedown', handleBlur);
-    };
-  }, []);
+   const handleBlur = (e) => {
+      console.dir(element);
 
-  return ref;
+      if (e.target.localName === element) {
+         callback();
+      } 
+   };
+
+   useEffect(() => {
+      document.addEventListener('mousedown', handleBlur);
+      return () => {
+         document.removeEventListener('mousedown', handleBlur);
+      };
+   }, []);
+
+   return ref;
 }

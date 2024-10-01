@@ -15,7 +15,7 @@ const rows = [
       "lender": "Commercial Real Estate",
       "loan": null,
       "territories": null,
-      "category": "category1",
+      "category": "Commercial Real Estate",
       "website": "www.investorsbank.com"
    },
    {
@@ -54,7 +54,7 @@ const rows = [
       "lender": null,
       "loan": null,
       "territories": "2300 State Route 33, Robbinsville, NJ 08691",
-      "category": "category1",
+      "category": "Commercial Real Estate",
       "website": null
    },
    {
@@ -67,7 +67,7 @@ const rows = [
       "lender": null,
       "loan": null,
       "territories": null,
-      "category": "category1",
+      "category": "Commercial Real Estate",
       "website": null
    }
 ]
@@ -76,7 +76,7 @@ export const Banks = () => {
    const [banks, setBanks] = useState([]);
    const { filters } = useGlobalState()
 
-   const filteredRows = rows.filter(row => (row.category === filters.category || !filters.category))
+   const filteredRows = banks.filter(row => (row.lender === filters.category || !filters.category))
 
    useEffect(() => {
       const getBanks = async () => {

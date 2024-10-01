@@ -1,20 +1,19 @@
 {
    "categories": {
       "field": {
-         "internal_name": "categories",
-         "id": "categories",
-         "name": "Categories"
+         "name": "Lender Type",
+         "internal_name": "lender"
       },
       "options": [
          {
             "id": 1,
-            "option_display": "category1",
-            "option_value": "category1"
+            "option_display": "All",
+            "option_value": ""
          },
          {
             "id": 2,
-            "option_display": "category2",
-            "option_value": "category2"
+            "option_display": "CRE",
+            "option_value": "Commercial Real Estate"
          },
          {
             "id": 3,

@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react'
-import { useGlobalState } from '../../../hooks'
-
+import { useGlobalState } from '../../hooks'
 
 
 export const SelectRow = ({ row }) => {
    const { dispatch, selectedRowsIds } = useGlobalState()
    const [value, setValue] = useState(false)
 
-   useEffect(()=>{
+   useEffect(() => {
 
-   },[value])
+   }, [value])
    const handleSelectChange = (e) => {
 
       selectedRowsIds.includes(row.id)

@@ -95,8 +95,24 @@ textarea {
    cursor: auto;
 }
 
+input {
+   background: $c5;
+   padding: 0.25em 0.5em;
+   border-radius: 15px;
+   font-size: 1.1em;
+   font-weight: 400;
+   min-height: 25px;
+}
+
 select {
    cursor: pointer;
+   color: white;
+   background: $c5;
+   padding: 0.25em 0.25em 0.25em 0.5em;
+   border-radius: 15px;
+   font-size: 1.1em;
+   font-weight: 400;
+   height: 2em;
 }
 
 dialog {
@@ -123,23 +139,3 @@ dialog::backdrop {
 
 
 
-::-webkit-scrollbar {
-   width: 0.75em;
-   height: 0.75em;
-}
-
-::-webkit-scrollbar-track {
-   background: $c2;
-}
-
-::-webkit-scrollbar-thumb {
-   background: $c1;
-   border-radius: 5px;
-}
-
-::-webkit-calender-picker-indicator {
-   background: white;
-   padding: 0.5em;
-   cursor: pointer;
-   border-radius: 5px;
-}

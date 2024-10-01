@@ -1,13 +1,41 @@
 import React from 'react'
-import { Thead, Tbody } from '../../cmps';
+import { Cells } from './Cells'
 
 export const Table = ({ headers, rows }) => {
 
    return (
       <div className="table-container">
          <table>
-            <Thead headers={headers} />
-            <Tbody headers={headers} rows={rows} />
+         <thead>
+         <tr>
+            {
+               headers.map(header => <th key={header.name}>{header.name}</th>)
+            }
+         </tr>
+      </thead>
+      <tbody>
+         {
+            rows.map((row) => (
+               <tr key={row._id||Math.random()}>
+                  {
+                     headers.map((header) => <td key={header.name}><Cells header={header} row={row} /></td>)
+                  }
+                  
+               </tr>
+            ))
+         }
+         {
+            !rows.length &&
+            <tr>
+               <td
+                  className='no-match'
+                  colSpan={100}
+               >
+                  No matches found
+               </td>
+            </tr>
+         }
+      </tbody>
          </table>
       </div>
    )

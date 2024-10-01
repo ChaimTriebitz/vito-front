@@ -9,8 +9,6 @@ function App() {
          <Msg />
          <Dialogs />
          <Header />
-         {/* <Register />
-         <Login /> */}
          <Main />
          <Footer />
       </div>

@@ -2,9 +2,11 @@ import { Header } from './Header.jsx'
 import { Main } from './Main.jsx'
 import { Footer } from './Footer.jsx'
 import { Msg } from './Msg.jsx'
-import { Input } from './Input.jsx'
-import { Select } from './Select.jsx'
-import { ActionsBar } from './ActionsBar.jsx'
+
+// INPUTS
+import { Select } from './inputs/Select.jsx'
+import { Input } from './inputs/Input.jsx'
+import { MultiSelect } from './inputs/MultiSelect.jsx'
 
 // AUTH
 import { Register } from './auth/Register.jsx'
@@ -12,22 +14,30 @@ import { Login } from './auth/Login.jsx'
 
 // TABLE
 import { Table } from './table/Table.jsx'
-import { Thead } from './table/Thead.jsx'
-import { Tbody } from './table/Tbody.jsx'
 import { Cells } from './table/Cells.jsx'
-import { Text } from './table/cells/Text.jsx'
-import { Date } from './table/cells/Date.jsx'
-import { Remove } from './table/cells/Remove.jsx'
-import { SelectRow } from './table/cells/SelectRow.jsx'
-import { DropDown } from './table/cells/DropDown.jsx'
-import { Details } from './table/cells/Details.jsx'
-import { Actions } from './table/cells/Actions.jsx'
+import { Actions } from './table/Actions.jsx'
+import { Text } from './table/Text.jsx'
+import { Date } from './table/Date.jsx'
+import { Remove } from './table/Remove.jsx'
+import { SelectRow } from './table/SelectRow.jsx'
+import { DropDown } from './table/DropDown.jsx'
+import { Details } from './table/Details.jsx'
 
 // DIALOG
 import { Dialogs } from './dialogs/Dialogs.jsx'
-import { DetailsDialog  } from './dialogs/DetailsDialog.jsx'
+import { DetailsDialog } from './dialogs/DetailsDialog.jsx'
+import { AddRowDialog } from './dialogs/AddRowDialog.jsx'
+import { ConfirmDialog } from './dialogs/ConfirmDialog.jsx'
+
+// ACTIONS-BAR
+import { ActionsBar } from './actions-bar/ActionsBar.jsx'
+import { AddRow } from './actions-bar/AddRow.jsx'
 
 export {
+   ConfirmDialog,
+   MultiSelect,
+   AddRowDialog,
+   AddRow,
    Select,
    ActionsBar,
    Input,
@@ -40,8 +50,6 @@ export {
    Login,
    // TABLE
    Table,
-   Thead,
-   Tbody,
    Cells,
    Text,
    SelectRow,
@@ -49,7 +57,7 @@ export {
    DropDown,
    Remove,
    Details,
-   Actions,              
+   Actions,
    // DIALOGS
    Dialogs,
    DetailsDialog,
