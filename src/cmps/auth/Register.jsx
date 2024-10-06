@@ -14,7 +14,7 @@ export const Register = () => {
    const handleSubmit = async (e) => {
       e.preventDefault()
       try {
-         const { data } = await axios.post(`http://localhost:5000/api/auth/register`, { ...credentials })
+         const { data } = await axios.post(`https://vito-back.onrender.com/api/auth/register`, { ...credentials })
          localStorage.setItem('vito', data.token)
          navigate('/')
          login()

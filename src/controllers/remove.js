@@ -6,7 +6,7 @@ export const remove = {
 
 async function bank(id) {
    try {
-      const res = await axios.delete(`http://localhost:5000/api/banks/${id}`, {
+      const res = await axios.delete(`https://vito-back.onrender.com/api/banks/${id}`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

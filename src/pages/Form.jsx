@@ -18,7 +18,7 @@ export const Form = () => {
    const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-         const res = await axios.post('http://localhost:5000/api/appointments', formData);
+         const res = await axios.post('https://vito-back.onrender.com/api/appointments', formData);
          console.log('Appointment booked:', res.data);
       } catch (err) {
          console.error(err);

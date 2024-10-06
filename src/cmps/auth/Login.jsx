@@ -17,7 +17,7 @@ export const Login = () => {
       e.preventDefault()
 
       try {
-         const { data } = await axios.post(`http://localhost:5000/api/auth/login`, { ...values })
+         const { data } = await axios.post(`https://vito-back.onrender.com/api/auth/login`, { ...values })
          if (data.success) {
             localStorage.setItem('vito', data.token)
             login()

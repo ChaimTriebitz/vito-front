@@ -4,9 +4,9 @@ export const get = {
    banks
 }
 
-async function banks(){
+async function banks() {
    try {
-      const res = await axios.get(`http://localhost:5000/api/banks`, {
+      const res = await axios.get(`https://vito-back.onrender.com/api/banks`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

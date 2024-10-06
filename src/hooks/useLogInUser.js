@@ -6,7 +6,7 @@ export const useLogInUser = () => {
    const { dispatch } = useGlobalState()
    return async () => {
       try {
-         const { data } = await axios.get(`http://localhost:5000/api/private`, {
+         const { data } = await axios.get(`https://vito-back.onrender.com/api/private`, {
             headers: {
                "Content-Type": "application/json",
                "Authorization": `Bearer ${localStorage.getItem('vito')}`

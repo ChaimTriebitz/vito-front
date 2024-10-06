@@ -81,7 +81,7 @@ export const Banks = () => {
    useEffect(() => {
       const getBanks = async () => {
          try {
-            const res = await axios.get(`http://localhost:5000/api/banks`, {
+            const res = await axios.get(`https://vito-back.onrender.com/api/banks`, {
                headers: {
                   "Content-Type": "application/json",
                   "Authorization": `Bearer ${localStorage.getItem('vito')}`
@@ -99,7 +99,7 @@ export const Banks = () => {
 
    const insert = async () => {
       try {
-         const { data } = await axios.post(`http://localhost:5000/api/banks/createMany`, { data: rows }, {
+         const { data } = await axios.post(`https://vito-back.onrender.com/api/banks/createMany`, { data: rows }, {
             headers: {
                "Content-Type": "application/json",
                "Authorization": `Bearer ${localStorage.getItem('vito')}`
