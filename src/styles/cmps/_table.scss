@@ -4,44 +4,82 @@
    z-index: 0;
    position: relative;
    flex: 1;
-}
 
-table {
-   width: 100%;
-   border-collapse: collapse;
-   height: fit-content;
-}
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      height: fit-content;
 
-thead {
-   position: sticky;
-   top: 0;
-   z-index: 1;
-   background: $c5;
-   color: $c4;
-   font-weight: 500;
-   font-size: 1.2em;
-}
+      thead {
+         position: sticky;
+         top: 0;
+         z-index: 1;
+         background: $c5;
+         color: $c4;
+         font-weight: 500;
+         font-size: 1.2em;
+      }
 
-tbody tr {
-   background: rgba(0, 28, 48, 0.85);
-   position: relative;
-   &:nth-child(odd){
-      background: rgb(0, 28, 48);
+      tbody tr {
+         background: rgba(0, 28, 48, 0.85);
+         position: relative;
+
+         &:nth-child(odd) {
+            background: rgb(0, 28, 48);
+         }
+
+
+      }
+
+      p {
+         font-size: 0.85em;
+
+         @media (max-width:700px) {
+            font-size: 0.75em;
+
+         }
+      }
+
+      th {
+         padding: 1em 0.5em;
+         white-space: nowrap;
+         position: relative;
+         text-align: center;
+
+         @media (max-width:700px) {
+            display: none;
+         }
+      }
+
+      td {
+         padding: 1em 0.5em;
+         white-space: nowrap;
+         text-align: center;
+
+         @media (max-width:700px) {
+            width: 100%;
+            max-width: 1000px !important;
+            display: flex;
+            justify-content: space-between;
+            gap: 5vw;
+            padding: 0.5em;
+
+            &.actions {
+               background: $c3;
+            }
+         }
+
+         span.mobile-header {
+            display: none;
+            flex-basis: 35%;
+
+            @media (max-width:700px) {
+               display: block;
+               text-align: left;
+            }
+         }
+      }
+
+
    }
-   p{
-   font-size: 0.85em;
-   }
 }
-
-
-
-
-th,
-td {
-   padding: 1em 0.5em;
-   white-space: nowrap;
-   text-align: center;
-}
-
-
-

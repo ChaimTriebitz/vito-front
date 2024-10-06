@@ -12,7 +12,7 @@ export const DetailsDialog = () => {
    const { row } = dialogs.details
    const { lender } = row
 
-   const { values, handelChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields(row, DIALOG_HEADERS.map(field => field.internal_name)))
+   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields(row, DIALOG_HEADERS.map(field => field.internal_name)))
    const { closeDialog, dialogRef, } = useDialog('details')
 
    const handleSave = (e) => {
@@ -22,7 +22,8 @@ export const DetailsDialog = () => {
 
    return (
       <dialog className={`dialog form details`} ref={dialogRef} onClose={closeDialog} >
-         <form onSubmit={handleSave} className='dialog-content'>
+         <div className="dialog-content">
+
             <header>
                <h1>{lender}</h1>
                <section className='btns'>
@@ -31,18 +32,21 @@ export const DetailsDialog = () => {
                </section>
             </header>
             <main >
-               {
-                  DIALOG_HEADERS.map(header =>
-                     <Input
-                        key={header.internal_name}
-                        value={values[header.internal_name]}
-                        field={header}
-                        handleChange={handelChange}
-                     />
-                  )
-               }
+               <form onSubmit={handleSave} className='form'>
+                  {
+                     DIALOG_HEADERS.map(header =>
+                        <Input
+                           key={header.internal_name}
+                           value={values[header.internal_name]}
+                           field={header}
+                           handleChange={handleChange}
+                        />
+                     )
+                  }
+               </form>
             </main>
-         </form>
+         </div>
+
       </dialog>
    )
 }

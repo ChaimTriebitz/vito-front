@@ -1,4 +1,4 @@
-import { Dialogs, Footer, Header, Login, Main, Msg, Register } from './cmps'
+import { Dialogs, Footer, Header, Main, Msg } from './cmps'
 
 function App() {
 

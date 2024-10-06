@@ -4,9 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
 
 export const Login = () => {
-   const data = useGlobalState()
    const { dialogRef, closeDialog } = useDialog('login')
-   const { values, handelChange } = useForm({ email: '', password: '' })
+   const { values, handleChange } = useForm({ username: '', password: '' })
 
 
    const login = useLogInUser()
@@ -37,12 +36,12 @@ export const Login = () => {
             <main>
                <form className='form' onSubmit={handleSubmit}>
                   <div className="input">
-                     <label htmlFor="email">email</label>
-                     <input id='email' type="email" name='email' value={values.email} onChange={handelChange} />
+                     <label htmlFor="username">username</label>
+                     <input id='username'  name='username' value={values.username} onChange={handleChange} />
                   </div>
                   <div className="input">
                      <label htmlFor="password">password</label>
-                     <input id='password' name='password' value={values.password} onChange={handelChange} />
+                     <input id='password' name='password' value={values.password} onChange={handleChange} />
                   </div>
                   <button className='btn success'>submit</button>
                   <p className='error'>{err}</p>

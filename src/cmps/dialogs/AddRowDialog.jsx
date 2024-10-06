@@ -9,7 +9,7 @@ import { toastMsg } from '../../functions/msgEvent';
 
 export const AddRowDialog = () => {
 
-   const { values, handelChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields({}, DIALOG_HEADERS.map(field => field.internal_name)))
+   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields({}, DIALOG_HEADERS.map(field => field.internal_name)))
    const { closeDialog, dialogRef, } = useDialog('addRow')
 
    const handleSave = (e) => {
@@ -35,7 +35,7 @@ export const AddRowDialog = () => {
                      key={header.internal_name}
                      value={values[header.internal_name]}
                      field={header}
-                     handleChange={handelChange}
+                     handleChange={handleChange}
                   />
                )}
             </main>
