@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
 import { ACTIONS } from '../../state'
+import { URLS } from '../../data'
 
 export const Register = () => {
    const { dispatch } = useGlobalState()
@@ -14,7 +15,7 @@ export const Register = () => {
    const handleSubmit = async (e) => {
       e.preventDefault()
       try {
-         const { data } = await axios.post(`https://vito-back.onrender.com/api/auth/register`, { ...values })
+         const { data } = await axios.post(`${URLS.base}${URLS.auth.register}`, { ...values })
          localStorage.setItem('vito', data.token)
          navigate('/')
          login()

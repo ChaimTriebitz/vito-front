@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { URLS } from '../data';
 
 export const remove = {
    bank
@@ -6,7 +7,7 @@ export const remove = {
 
 async function bank(id) {
    try {
-      const res = await axios.delete(`https://vito-back.onrender.com/api/banks/${id}`, {
+      const res = await axios.delete(`${URLS.base}${URLS.banks.remove}/${id}`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

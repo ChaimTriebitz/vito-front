@@ -6,4 +6,5 @@ export const initialState = {
    filters: {
       category: '',
    },
+   banks:[],
 }

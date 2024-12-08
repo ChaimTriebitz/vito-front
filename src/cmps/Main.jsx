@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Banks, Home } from '../pages'
-import { Form } from '../pages/Form'
+import { Banks } from '../pages'
 import { useGlobalState } from '../hooks'
 import { useEffect } from 'react'
 import { ACTIONS } from '../state'
@@ -8,7 +7,6 @@ import { ACTIONS } from '../state'
 export const Main = () => {
    const { loggedInUser, dispatch } = useGlobalState()
    const tok = localStorage.getItem('vito')
-   console.log(loggedInUser);
 
    useEffect(() => {
       if (!tok) {

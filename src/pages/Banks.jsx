@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ActionsBar, Table } from '../cmps';
-import { TABLE_HEADERS } from '../data';
+import { TABLE_HEADERS, URLS } from '../data';
 import { useGlobalState } from '../hooks';
+import { get } from '../controllers';
+import { ACTIONS } from '../state';
 
 const rows = [
    {
@@ -73,46 +75,30 @@ const rows = [
 ]
 
 export const Banks = () => {
-   const [banks, setBanks] = useState([]);
-   const { filters } = useGlobalState()
+   const { filters, dispatch, banks } = useGlobalState()
 
-   const filteredRows = banks.filter(row => (row.lender === filters.category || !filters.category))
+   const filteredRows = banks?.filter(row => (row.lender === filters.category || !filters.category))
 
    useEffect(() => {
-      const getBanks = async () => {
-         try {
-            const res = await axios.get(`https://vito-back.onrender.com/api/banks`, {
-               headers: {
-                  "Content-Type": "application/json",
-                  "Authorization": `Bearer ${localStorage.getItem('vito')}`
-               }
-            })
-
-            setBanks(res.data);
-         } catch (err) {
-            console.error(err);
-         }
-      };
-
-      getBanks();
+      get.banks().then((res) => dispatch({ type: ACTIONS.SET, entity: 'banks', payload: res.data }))
    }, []);
 
-   const insert = async () => {
-      try {
-         const { data } = await axios.post(`https://vito-back.onrender.com/api/banks/createMany`, { data: rows }, {
-            headers: {
-               "Content-Type": "application/json",
-               "Authorization": `Bearer ${localStorage.getItem('vito')}`
-            }
-         })
-         if (data.success) {
-            console.log(data);
+   // const insert = async () => {
+   //    try {
+   //       const { data } = await axios.post(`${URLS.base}${URLS.banks.createMany}`, { data: rows }, {
+   //          headers: {
+   //             "Content-Type": "application/json",
+   //             "Authorization": `Bearer ${localStorage.getItem('vito')}`
+   //          }
+   //       })
+   //       if (data.success) {
+   //          console.log(data);
 
-         }
-      } catch (error) {
-         console.log(error.response.data.error)
-      }
-   }
+   //       }
+   //    } catch (error) {
+   //       console.log(error.response.data.error)
+   //    }
+   // }
 
    return (
       <>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { URLS } from '../data';
 
 export const create = {
    bank
@@ -6,7 +7,7 @@ export const create = {
 
 async function bank(data) {
    try {
-      const res = await axios.post(`https://vito-back.onrender.com/api/banks/create`, data, {
+      const res = await axios.post(`${URLS.base}${URLS.banks.create}`, data, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
+import { URLS } from '../../data'
 
 export const Login = () => {
    const { dialogRef, closeDialog } = useDialog('login')
@@ -16,7 +17,7 @@ export const Login = () => {
       e.preventDefault()
 
       try {
-         const { data } = await axios.post(`https://vito-back.onrender.com/api/auth/login`, { ...values })
+         const { data } = await axios.post(`${URLS.base}${URLS.auth.login}`, { ...values })
          if (data.success) {
             localStorage.setItem('vito', data.token)
             login()
@@ -37,7 +38,7 @@ export const Login = () => {
                <form className='form' onSubmit={handleSubmit}>
                   <div className="input">
                      <label htmlFor="username">username</label>
-                     <input id='username'  name='username' value={values.username} onChange={handleChange} />
+                     <input id='username' name='username' value={values.username} onChange={handleChange} />
                   </div>
                   <div className="input">
                      <label htmlFor="password">password</label>
