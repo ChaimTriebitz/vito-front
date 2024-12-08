@@ -20,7 +20,7 @@ export const Table = ({ headers, rows }) => {
                         {
                            headers.map((header) =>
                               <td key={header.name} className={header.cell_type}>
-                                  <span className='mobile-header'>{header.name}</span>
+                                 <span className='mobile-header'>{header.name}</span>
                                  <Cells header={header} row={row} />
                               </td>
                            )
