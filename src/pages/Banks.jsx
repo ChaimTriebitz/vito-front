@@ -80,7 +80,7 @@ export const Banks = () => {
    const filteredRows = banks?.filter(row => (row.lender === filters.category || !filters.category))
 
    useEffect(() => {
-      get.banks().then((res) => dispatch({ type: ACTIONS.SET, entity: 'banks', payload: res.data }))
+      get.data('banks').then((res) => dispatch({ type: ACTIONS.SET, entity: 'banks', payload: res.data }))
    }, []);
 
    // const insert = async () => {
@@ -101,11 +101,11 @@ export const Banks = () => {
    // }
 
    return (
-      <>
+      <main className='page banks'>
          <ActionsBar />
          {/* <button className='btn' style={{ position: 'absolute',background:'black',zIndex:9099 }} onClick={insert}>insert banks</button> */}
-         <Table headers={TABLE_HEADERS} rows={filteredRows} />
-      </>
+         <Table headers={TABLE_HEADERS.banks} rows={filteredRows} />
+      </main>
    );
 };
 

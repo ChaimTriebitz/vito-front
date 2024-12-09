@@ -10,18 +10,32 @@
    }
 
 
-   
-   .input {
+
+   .input-field {
       position: relative;
       justify-content: space-between;
       align-items: baseline;
-   
-      >* {
-         flex: 1;
+
+      .multi-select {
+         flex-direction: column;
+         background: $c5;
+         padding: 0.5em;
+
+         .multi-select-item {
+            justify-content: space-between;
+            align-items: center;
+         }
       }
-   
+
+
       label {
          color: $c6;
+         flex: 1;
+      }
+
+      .input-item {
+         width: 0%;
+         flex-basis: 75%;
       }
    }
 }

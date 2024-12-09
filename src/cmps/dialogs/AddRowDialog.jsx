@@ -1,45 +1,44 @@
 import React from 'react'
-import { useChangedValues, useDialog, useForm, useGlobalState } from '../../hooks'
+import { useDialog, useForm, useGlobalState } from '../../hooks'
 import { svgs } from '../../assets/svgs'
-import { DIALOG_HEADERS } from '../../data';
-import { Input } from '../inputs/Input';
-import { msgEvent, objects } from '../../functions';
+import { DIALOG_FIELDS } from '../../data';
+import { toastMsg, objects } from '../../functions';
 import { create } from '../../controllers';
-import { toastMsg } from '../../functions/msgEvent';
+import { Inputs } from '../../cmps';
 
 export const AddRowDialog = () => {
+   const { page } = useGlobalState()
 
-   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields({}, DIALOG_HEADERS.map(field => field.internal_name)))
+   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields({}, DIALOG_FIELDS[page].map(field => field.internal_name)))
    const { closeDialog, dialogRef, } = useDialog('addRow')
 
-   const handleSave = (e) => {
-      e.preventDefault()
-      create.bank(values).then(res => toastMsg.success('New Bank Added Successfully'))
-      // console.log(values);
-
+   const handleSave = () => {
+      create.data(values, page)
+         .then((res) => toastMsg.success(res.message))
    }
 
    return (
-      <dialog className={`dialog form details`} ref={dialogRef} onClose={closeDialog} >
-         <form onSubmit={handleSave} className='dialog-content'>
+      <dialog className={`dialog  details`} ref={dialogRef} onClose={closeDialog} >
+         <div className='dialog-content'>
             <header>
-               <h1>Add New Bank</h1>
+               <h1>Add New Row</h1>
                <section className='btns'>
-                  {isValuesChanged && <button type='submit' >{svgs.save}</button>}
+                  {isValuesChanged && <button onClick={handleSave} >{svgs.save}</button>}
                   <button type='button' onClick={closeDialog}>{svgs.clear}</button>
                </section>
             </header>
-            <main >
-               {DIALOG_HEADERS.map(header =>
-                  <Input
-                     key={header.internal_name}
-                     value={values[header.internal_name]}
-                     field={header}
+            <main className='form'>
+               {DIALOG_FIELDS[page].map(field =>
+                  <Inputs
+                     key={field.internal_name}
+                     value={values[field.internal_name]}
+                     field={field}
                      handleChange={handleChange}
+                     options={field.options}
                   />
                )}
             </main>
-         </form>
+         </div>
       </dialog>
    )
 }

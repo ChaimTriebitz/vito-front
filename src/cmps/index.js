@@ -4,8 +4,10 @@ import { Footer } from './Footer.jsx'
 import { Msg } from './Msg.jsx'
 
 // INPUTS
-import { Select } from './inputs/Select.jsx'
+import { Inputs } from './inputs/Inputs.jsx'
 import { Input } from './inputs/Input.jsx'
+import { Select } from './inputs/Select.jsx'
+import { Textarea } from './inputs/Textarea.jsx'
 import { MultiSelect } from './inputs/MultiSelect.jsx'
 
 // AUTH
@@ -34,17 +36,19 @@ import { ActionsBar } from './actions-bar/ActionsBar.jsx'
 import { AddRow } from './actions-bar/AddRow.jsx'
 
 export {
-   ConfirmDialog,
-   MultiSelect,
-   AddRowDialog,
-   AddRow,
-   Select,
+   // ACTIONS-BAR
    ActionsBar,
-   Input,
+   AddRow,
    Msg,
    Header,
    Main,
    Footer,
+   // INPUTS
+   Inputs,
+   Textarea,
+   MultiSelect,
+   Select,
+   Input,
    // AUTH
    Register,
    Login,
@@ -60,5 +64,7 @@ export {
    Actions,
    // DIALOGS
    Dialogs,
+   ConfirmDialog,
    DetailsDialog,
+   AddRowDialog,
 }

@@ -1,7 +1,7 @@
-import { msgEvent } from './msgEvent';
+import { toastMsg } from './toastMsg.js';
 import { objects } from './objects.js';
 
 export {
-   msgEvent,
+   toastMsg,
    objects
 }

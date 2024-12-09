@@ -4,23 +4,24 @@ export const Select = ({ field, options = [], value, handleChange }) => {
 
    return (
       <select
+         className='input-item'
          name={internal_name}
          id={id}
          onChange={(e) => handleChange(e.target.name, e.target.value)}
          value={value || ''}
-         className='select'
          required={required}
       >
          <option value='' disabled>{name}</option>
          {
-            options.map((option, optionIdx) =>
-               <option
-                  key={option.id || optionIdx}
-                  value={option.option_value || ''}
+            options.map((option, optionIdx) => {
+               const { id, option_display, option_value } = option
+               return <option
+                  key={id || optionIdx}
+                  value={option_value || ''}
                >
-                  {option.option_display}
+                  {option_display}
                </option>
-            )
+            })
          }
       </select>
    )

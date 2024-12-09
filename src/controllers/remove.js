@@ -2,12 +2,12 @@ import axios from 'axios';
 import { URLS } from '../data';
 
 export const remove = {
-   bank
+   data,
 }
 
-async function bank(id) {
+async function data(id,page) {
    try {
-      const res = await axios.delete(`${URLS.base}${URLS.banks.remove}/${id}`, {
+      const res = await axios.delete(`${URLS.base}${URLS[page].remove}/${id}`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

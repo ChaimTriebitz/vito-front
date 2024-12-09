@@ -7,7 +7,7 @@ import { AddRow, MultiSelect } from '..'
 
 export const ActionsBar = () => {
    const [value, setValue] = useState('')
-   const { dispatch, filters } = useGlobalState()
+   const { dispatch, filters, page } = useGlobalState()
    const handleChange = (a, b) => {
       setValue(b)
    }
@@ -16,7 +16,7 @@ export const ActionsBar = () => {
       dispatch({ type: ACTIONS.SET, entity: 'filters', payload: { ...filters, category: value } })
    }, [value])
 
-   const { field, options } = FILTERS.categories
+   const { field, options } = FILTERS[page].categories
    return (
       <div className='actions-bar'>
          <Select

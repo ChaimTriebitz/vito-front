@@ -40,7 +40,7 @@ export const Register = () => {
                         id='name'
                         name='username'
                         value={values.username}
-                        onChange={handleChange}
+                        onChange={(e) => handleChange(e.target.name, e.target.value)}
                      />
                   </div>
                   <div className="input">
@@ -50,7 +50,7 @@ export const Register = () => {
                         type="email"
                         name='email'
                         value={values.email}
-                        onChange={handleChange}
+                        onChange={(e) => handleChange(e.target.name, e.target.value)}
                      />
                   </div>
                   <div className="input">
@@ -59,7 +59,7 @@ export const Register = () => {
                         id='password'
                         name='password'
                         value={values.password}
-                        onChange={handleChange}
+                        onChange={(e) => handleChange(e.target.name, e.target.value)}
                      />
                   </div>
                   <button className='btn success'>submit</button>

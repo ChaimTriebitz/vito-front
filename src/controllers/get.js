@@ -2,12 +2,12 @@ import axios from 'axios';
 import { URLS } from '../data';
 
 export const get = {
-   banks
+   data,
 }
 
-async function banks() {
+async function data(page) {
    try {
-      const res = await axios.get(`${URLS.base}${URLS.banks.get}`, {
+      const res = await axios.get(`${URLS.base}${URLS[page].get}`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`
@@ -19,3 +19,4 @@ async function banks() {
       console.error(err);
    }
 };
+

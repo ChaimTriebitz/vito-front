@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cells } from './Cells'
 
-export const Table = ({ headers, rows }) => {
+export const Table = ({ headers = [], rows = [] }) => {
 
    return (
       <div className="table-container">

@@ -1,23 +1,22 @@
 import React from 'react'
-import { useChangedValues, useDialog, useForm, useGlobalState } from '../../hooks'
+import { useDialog, useForm, useGlobalState } from '../../hooks'
 import { svgs } from '../../assets/svgs'
-import { DIALOG_HEADERS } from '../../data';
-import { Input } from '..';
+import { DIALOG_FIELDS } from '../../data';
+import {  Inputs } from '../../cmps';
 import { objects } from '../../functions';
 import { update } from '../../controllers';
 
 export const DetailsDialog = () => {
 
-   const { dialogs } = useGlobalState()
+   const { dialogs, page } = useGlobalState()
    const { row } = dialogs.details
    const { lender } = row
 
-   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields(row, DIALOG_HEADERS.map(field => field.internal_name)))
+   const { values, handleChange, changedValues, isValuesChanged, restart } = useForm(objects.filterFields(row, DIALOG_FIELDS[page].map(field => field.internal_name)))
    const { closeDialog, dialogRef, } = useDialog('details')
 
-   const handleSave = (e) => {
-      e.preventDefault()
-      update.bank(row._id, values)
+   const handleSave = () => {
+      update.data(row._id, values, page)
    }
 
    return (
@@ -27,23 +26,22 @@ export const DetailsDialog = () => {
             <header>
                <h1>{lender}</h1>
                <section className='btns'>
-                  {isValuesChanged && <button type='submit' >{svgs.save}</button>}
-                  <button type='button' onClick={closeDialog}>{svgs.clear}</button>
+                  {isValuesChanged && <button onClick={handleSave} >{svgs.save}</button>}
+                  <button onClick={closeDialog}>{svgs.clear}</button>
                </section>
             </header>
             <main >
-               <form onSubmit={handleSave} className='form'>
                   {
-                     DIALOG_HEADERS.map(header =>
-                        <Input
-                           key={header.internal_name}
-                           value={values[header.internal_name]}
-                           field={header}
+                     DIALOG_FIELDS[page].map(field =>
+                        <Inputs
+                           key={field.internal_name}
+                           value={values[field.internal_name]}
+                           field={field}
                            handleChange={handleChange}
+                           options={field.options}
                         />
                      )
                   }
-               </form>
             </main>
          </div>
 

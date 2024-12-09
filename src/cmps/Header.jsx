@@ -1,12 +1,21 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/imgs/logo-vito.png';
+import { useEffect } from 'react';
+import { useGlobalState } from '../hooks';
+import { ACTIONS } from '../state';
 
 const links = [
-   { name: 'Home', link: '/' },
    { name: 'Banks', link: '/banks' },
+   { name: 'Lenders', link: '/lenders' },
 ]
 
 export const Header = () => {
+   const { dispatch } = useGlobalState()
+   const { pathname } = useLocation()
+
+   useEffect(() => {
+      dispatch({ type: ACTIONS.SET, entity: 'page', payload: pathname.replace(/^\/+/, '') })
+   }, [])
    return (
       <header className='header'>
          <img className='logo' src={logo} alt="company logo" />

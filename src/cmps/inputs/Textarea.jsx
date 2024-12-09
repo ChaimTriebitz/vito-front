@@ -1,4 +1,4 @@
-export const Input = ({
+export const Textarea = ({
    field = {},
    value,
    handleChange = () => { },
@@ -7,7 +7,7 @@ export const Input = ({
    const { internal_name, type, required = false } = field
 
    return (
-      <input
+      <textarea
          className='input-item'
          type={type}
          name={internal_name}

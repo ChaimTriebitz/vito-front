@@ -4,6 +4,11 @@
    width: 100vw;
    gap: 0;
 
+   .page {
+      height: calc(100% - 75px);
+      gap: 0;
+      flex-direction: column;
+   }
 
 }
 
@@ -27,4 +32,3 @@
    cursor: pointer;
    border-radius: 5px;
 }
-

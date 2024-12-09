@@ -1,5 +1,5 @@
 export const initialState = {
-   page: 'home',
+   page: 'banks',
    loggedInUser: null,
    dialogs: {},
    selectedIds: [],

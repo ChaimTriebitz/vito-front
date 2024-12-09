@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { msgEvent } from '../functions'
 import { svgs } from '../assets/svgs'
+import { msgEvent } from '../functions/toastMsg'
 
 
 export const Msg = () => {

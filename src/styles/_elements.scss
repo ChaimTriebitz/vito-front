@@ -88,8 +88,6 @@ li {
    line-height: 1.2;
 }
 
-
-
 input,
 select,
 textarea {
@@ -97,11 +95,15 @@ textarea {
    border: none;
    background: none;
    cursor: auto;
+   background: $c5;
+   padding: 0.25em 0.5em;
+   color: white;
+   height: 2em;
+   font-size: 1.1em;
+   border-radius: 15px;
 }
 
 input {
-   background: $c5;
-   padding: 0.25em 0.5em;
    border-radius: 15px;
    font-size: 1.1em;
    font-weight: 400;
@@ -110,13 +112,6 @@ input {
 
 select {
    cursor: pointer;
-   color: white;
-   background: $c5;
-   padding: 0.25em 0.25em 0.25em 0.5em;
-   border-radius: 15px;
-   font-size: 1.1em;
-   font-weight: 400;
-   height: 2em;
 }
 
 dialog {

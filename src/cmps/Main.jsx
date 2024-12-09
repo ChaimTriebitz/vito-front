@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Banks } from '../pages'
+import { Banks, Lenders } from '../pages'
 import { useGlobalState } from '../hooks'
 import { useEffect } from 'react'
 import { ACTIONS } from '../state'
@@ -28,8 +28,9 @@ export const Main = () => {
 
    if (!loggedInUser && !tok) return
    return (
-      <main className='main cmp'>
-         <Banks />
-      </main>
+      <Routes>
+         <Route  path='/banks' element={<Banks />}/>
+         <Route  path='/lenders' element={<Lenders />}/>
+      </Routes>
    )
 }

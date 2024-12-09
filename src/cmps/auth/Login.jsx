@@ -38,11 +38,11 @@ export const Login = () => {
                <form className='form' onSubmit={handleSubmit}>
                   <div className="input">
                      <label htmlFor="username">username</label>
-                     <input id='username' name='username' value={values.username} onChange={handleChange} />
+                     <input id='username' name='username' value={values.username} onChange={(e) => handleChange(e.target.name, e.target.value)} />
                   </div>
                   <div className="input">
                      <label htmlFor="password">password</label>
-                     <input id='password' name='password' value={values.password} onChange={handleChange} />
+                     <input id='password' name='password' value={values.password} onChange={(e) => handleChange(e.target.name, e.target.value)} />
                   </div>
                   <button className='btn success'>submit</button>
                   <p className='error'>{err}</p>

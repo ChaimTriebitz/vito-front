@@ -1,32 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export const MultiSelect = () => {
-   const [selectedOptions, setSelectedOptions] = useState([]);
+export const MultiSelect = ({
+   field = {},
+   value = [],
+   handleChange = () => { },
+   options = []
+}) => {
 
-   const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+   const [values, setValues] = useState(value)
+   console.log(values)
 
-   const handleCheckboxChange = (option) => {
-      if (selectedOptions.includes(option)) {
-         setSelectedOptions(selectedOptions.filter((selected) => selected !== option));
-      } else {
-         setSelectedOptions([...selectedOptions, option]);
-      }
-   };
+   useEffect(() => {
+      handleChange(field.internal_name, values)
+   }, [values])
+
+   const handleCheckboxChange = (optionValue) => {
+      setValues((prevValues) =>
+         prevValues.includes(optionValue)
+            ? prevValues.filter(v => v !== optionValue)
+            : [...prevValues, optionValue]
+      )
+   }
 
    return (
-      <div className='multi-select'>
-         {options.map((option, index) => (
-            <div key={index} className='input'>
-               <input
-                  type="checkbox"
-                  id={`checkbox-${index}`}
-                  value={option}
-                  checked={selectedOptions.includes(option)}
-                  onChange={() => handleCheckboxChange(option)}
-               />
-               <label htmlFor={`checkbox-${index}`}>{option}</label>
-            </div>
-         ))}
+      <div className='input-item multi-select'>
+         {
+            options.map(option => {
+               const { id, option_display, option_value } = option
+               return (
+                  <div key={id} className='multi-select-item'>
+                     <input
+                        type="checkbox"
+                        id={id}
+                        value={option}
+                        checked={values.includes(option_value)}
+                        onChange={() => handleCheckboxChange(option_value)}
+                     />
+                     <label htmlFor={id}>{option_display}</label>
+                  </div>
+               )
+            })
+         }
       </div>
    );
 };

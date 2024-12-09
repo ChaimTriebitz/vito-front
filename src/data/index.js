@@ -1,11 +1,11 @@
-import TABLE_HEADERS from './banks/TABLE_HEADERS.json'
-import DIALOG_HEADERS from './banks/DIALOG_HEADERS.json'
-import FILTERS from './banks/FILTERS.json'
 import URLS from './URLS.json'
+import TABLE_HEADERS from './TABLE_HEADERS.json'
+import DIALOG_FIELDS from './DIALOG_FIELDS.json'
+import FILTERS from './FILTERS.json'
 
 export {
    TABLE_HEADERS,
-   DIALOG_HEADERS,
+   DIALOG_FIELDS,
    FILTERS,
    URLS,
 }

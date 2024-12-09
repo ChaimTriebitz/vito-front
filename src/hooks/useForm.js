@@ -5,6 +5,7 @@ import { useUpdateEffect } from '../hooks'
 export const useForm = (initValues) => {
 
    const [values, setValues] = useState(initValues)
+
    const [changedValues, setChangedValues] = useState({})
 
    const initValuesRef = useRef(initValues)
@@ -17,7 +18,8 @@ export const useForm = (initValues) => {
    useUpdateEffect(() => {
       setChangedValues(objects.getChangedProperties(initValuesRef.current, values))
    }, [values])
-   const handleChange = (e) => setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+
+   const handleChange = (name,value) => setValues((prev) => ({ ...prev, [name]: value }))
 
    return {
       values,

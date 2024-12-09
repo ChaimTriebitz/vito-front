@@ -16,7 +16,11 @@
       "remove": "api/banks/remove",
       "update": "api/banks/update"
    },
-   "zmanim": {
-      "get": "api/zmanim"
+   "lenders": {
+      "create": "api/lenders/create",
+      "createMany": "api/lenders/createMany",
+      "get": "api/lenders",
+      "remove": "api/lenders/remove",
+      "update": "api/lenders/update"
    }
 }
