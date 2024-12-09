@@ -32,7 +32,7 @@ export const Login = () => {
       <dialog className='dialog login' ref={dialogRef} onClose={closeDialog}>
          <div className="dialog-content">
             <header>
-               <h1>Login</h1>
+               <h5>Login</h5>
             </header>
             <main>
                <form className='form' onSubmit={handleSubmit}>

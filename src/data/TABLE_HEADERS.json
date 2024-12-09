@@ -80,7 +80,8 @@
                "cell_type": "details"
             },
             {
-               "cell_type": "remove"
+               "cell_type": "remove",
+               "msg":"lender"
             }
          ]
       },
@@ -112,17 +113,17 @@
       {
          "name": "Office",
          "internal_name": "office",
-         "cell_type": "text"
+         "cell_type": "phone"
       },
       {
          "name": "Cell",
          "internal_name": "cell",
-         "cell_type": "text"
+         "cell_type": "phone"
       },
       {
          "name": "Email",
          "internal_name": "email",
-         "cell_type": "text"
+         "cell_type": "email"
       },
       {
          "name": "Notes",

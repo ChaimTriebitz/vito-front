@@ -16,5 +16,6 @@ async function data(id, data,page) {
       return res;
    } catch (err) {
       console.error(err);
+      throw err;
    }
 }

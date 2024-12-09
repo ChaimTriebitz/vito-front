@@ -1,5 +1,5 @@
 {
-   "base": "http://localhost:5000/",
+   "base": "https://vito-back.onrender.com/",
    "localhost": "http://localhost:5000/",
    "live": "https://vito-back.onrender.com/",
    "auth": {

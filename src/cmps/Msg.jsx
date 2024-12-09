@@ -12,7 +12,7 @@ export const Msg = () => {
       let removeEvent = msgEvent.on('show-msg', (msg) => {
          setMsg(msg)
          setIsHidden(false)
-         hideMsg(2500)
+         hideMsg(5000)
       })
       return () => {
          removeEvent()
@@ -39,8 +39,8 @@ export const Msg = () => {
    return (
       <div className={`msg ${msg ? 'show' : ''} ${isHidden ? 'hide' : ''} ${msg ? msg.type : ''}`}>
          <span>{getIcon()}</span>
-         <h1>{msg ? msg.txt : ''}</h1>
-         <button className="close-btn" onClick={() => hideMsg(0)}>{svgs.clear || '❌'}</button>
+         <h5>{msg ? msg.txt : ''}</h5>
+         {/* <button className="close-btn" onClick={() => hideMsg(0)}>{svgs.clear || '❌'}</button> */}
       </div>
    )
 }

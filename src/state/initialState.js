@@ -1,4 +1,5 @@
 export const initialState = {
+   refreshCount: 0,
    page: 'banks',
    loggedInUser: null,
    dialogs: {},
@@ -6,5 +7,6 @@ export const initialState = {
    filters: {
       category: '',
    },
-   banks:[],
+   banks: [],
+   lenders: [],
 }

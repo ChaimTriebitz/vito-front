@@ -1,6 +1,6 @@
 .msg {
    z-index: 100000;
-   padding: 1em 3em 1em 1em;
+   padding: 1em;
    background: gray;
    position: absolute;
    right: 0;
@@ -17,10 +17,10 @@
       height: 30px;
    }
 
-   h1 {
-      padding: 0 20px;
-      font-size: 18px;
-   }
+   // h1 {
+   //    padding: 0 20px;
+   //    font-size: 18px;
+   // }
 
    button {
       position: absolute;

@@ -139,13 +139,13 @@
          "name": "Office",
          "internal_name": "office",
          "element_type": "input",
-         "type": "number"
+         "type": "tel"
       },
       {
          "name": "Cell",
          "internal_name": "cell",
          "element_type": "input",
-         "type": "number"
+         "type": "tel"
       },
       {
          "name": "Email",

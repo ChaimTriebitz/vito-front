@@ -19,10 +19,11 @@ import { Table } from './table/Table.jsx'
 import { Cells } from './table/Cells.jsx'
 import { Actions } from './table/Actions.jsx'
 import { Text } from './table/Text.jsx'
+import { Phone } from './table/Phone.jsx'
+import { Email } from './table/Email.jsx'
 import { Date } from './table/Date.jsx'
 import { Remove } from './table/Remove.jsx'
 import { SelectRow } from './table/SelectRow.jsx'
-import { DropDown } from './table/DropDown.jsx'
 import { Details } from './table/Details.jsx'
 
 // DIALOG
@@ -58,7 +59,8 @@ export {
    Text,
    SelectRow,
    Date,
-   DropDown,
+   Phone,
+   Email,
    Remove,
    Details,
    Actions,

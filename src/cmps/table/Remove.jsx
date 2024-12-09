@@ -1,18 +1,19 @@
 import { svgs } from '../../assets/svgs'
+import { remove } from '../../controllers'
 import { useGlobalState } from '../../hooks'
 import { ACTIONS } from '../../state'
 
 
 export const Remove = ({ row, header }) => {
-   const { dispatch } = useGlobalState()
-
+   const { dispatch, page } = useGlobalState()
 
    const handleRemove = () => {
       dispatch({
          type: ACTIONS.OPEN_DIALOG,
          entity: 'confirm',
          payload: {
-            row
+            action: () => remove.data(row._id, page),
+            msg: `deleting "${row[header.msg]}" from table`
          }
       })
    }

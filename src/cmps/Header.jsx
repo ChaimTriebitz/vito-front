@@ -5,7 +5,7 @@ import { useGlobalState } from '../hooks';
 import { ACTIONS } from '../state';
 
 const links = [
-   { name: 'Banks', link: '/banks' },
+   // { name: 'Banks', link: '/banks' },
    { name: 'Lenders', link: '/lenders' },
 ]
 

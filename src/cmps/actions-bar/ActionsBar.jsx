@@ -12,19 +12,20 @@ export const ActionsBar = () => {
       setValue(b)
    }
 
-   useUpdateEffect(() => {
-      dispatch({ type: ACTIONS.SET, entity: 'filters', payload: { ...filters, category: value } })
-   }, [value])
+   // useUpdateEffect(() => {
+   //    dispatch({ type: ACTIONS.SET, entity: 'filters', payload: { ...filters, category: value } })
+   // }, [value])
 
-   const { field, options } = FILTERS[page].categories
+   // const { field, options } = FILTERS[page]?.categories
+
    return (
       <div className='actions-bar'>
-         <Select
+         {/* <Select
             field={field}
             options={options}
             value={value}
             handleChange={handleChange}
-         />
+         /> */}
          <AddRow />
       </div>
    )

@@ -1,9 +1,10 @@
 export const ACTIONS = {
-   SET: 1,
-   CLOSE_DIALOG: 2,
-   OPEN_DIALOG: 3,
-   PUSH: 4,
-   POP: 5,
+   SET: 'SET',
+   CLOSE_DIALOG: 'CLOSE_DIALOG',
+   OPEN_DIALOG: 'OPEN_DIALOG',
+   PUSH: 'PUSH',
+   POP: 'POP',
+   REFRESH_DATA: 'REFRESH_DATA',
 }
 
 

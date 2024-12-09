@@ -6,11 +6,11 @@ import { ActionsBar, Table } from '../cmps';
 import { TABLE_HEADERS } from '../data';
 
 export const Lenders = () => {
-   const { filters, dispatch, lenders } = useGlobalState()
+   const { filters, dispatch, lenders,refreshCount } = useGlobalState()
 
    useEffect(() => {
       get.data('lenders').then((res) => dispatch({ type: ACTIONS.SET, entity: 'lenders', payload: res.data }))
-   }, []);
+   }, [refreshCount])
 
    // const insert = async () => {
    //    try {

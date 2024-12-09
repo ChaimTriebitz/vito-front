@@ -8,7 +8,16 @@
    &.success {
       background: $c-success;
    }
-   .danger {
+
+   &.danger {
       background: $c-danger;
+   }
+}
+
+.btns {
+   justify-content: center;
+
+   .btn {
+      flex: 1;
    }
 }
