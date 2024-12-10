@@ -1,7 +1,10 @@
 import React from 'react'
 import { Cells } from './Cells'
+import { useGlobalState } from '../../hooks';
+import { SEARCH } from '../../data';
 
 export const Table = ({ headers = [], rows = [] }) => {
+   
 
    return (
       <div className="table-container">

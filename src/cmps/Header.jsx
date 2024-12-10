@@ -15,7 +15,7 @@ export const Header = () => {
 
    useEffect(() => {
       dispatch({ type: ACTIONS.SET, entity: 'page', payload: pathname.replace(/^\/+/, '') })
-   }, [])
+   }, [pathname])
    return (
       <header className='header'>
          <img className='logo' src={logo} alt="company logo" />

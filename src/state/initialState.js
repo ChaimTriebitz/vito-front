@@ -9,4 +9,5 @@ export const initialState = {
    },
    banks: [],
    lenders: [],
+   search: '',
 }

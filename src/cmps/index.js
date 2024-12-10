@@ -25,6 +25,7 @@ import { Date } from './table/Date.jsx'
 import { Remove } from './table/Remove.jsx'
 import { SelectRow } from './table/SelectRow.jsx'
 import { Details } from './table/Details.jsx'
+import { Notes } from './table/Notes.jsx'
 
 // DIALOG
 import { Dialogs } from './dialogs/Dialogs.jsx'
@@ -35,15 +36,17 @@ import { ConfirmDialog } from './dialogs/ConfirmDialog.jsx'
 // ACTIONS-BAR
 import { ActionsBar } from './actions-bar/ActionsBar.jsx'
 import { AddRow } from './actions-bar/AddRow.jsx'
+import { Search } from './actions-bar/Search.jsx'
 
 export {
-   // ACTIONS-BAR
-   ActionsBar,
-   AddRow,
    Msg,
    Header,
    Main,
    Footer,
+   // ACTIONS-BAR
+   ActionsBar,
+   AddRow,
+   Search,
    // INPUTS
    Inputs,
    Textarea,
@@ -64,6 +67,7 @@ export {
    Remove,
    Details,
    Actions,
+   Notes,
    // DIALOGS
    Dialogs,
    ConfirmDialog,

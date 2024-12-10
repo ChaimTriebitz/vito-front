@@ -1,0 +1,11 @@
+#searchLoader {
+   border: 5px solid white;
+   border-radius: 50%;
+   border-top: 3.5px solid gray;
+   border-right: 3.5px solid gray;
+   border-bottom: 3.5px solid gray;
+   width: 22.5px;
+   height: 22.5px;
+   -webkit-animation: spin 1s linear infinite;
+   animation: spin 1s linear infinite;
+}
