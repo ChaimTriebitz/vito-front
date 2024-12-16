@@ -3,7 +3,7 @@
    z-index: 999;
    height: 100vh;
    background: rgb(0 0 0 / 0.3);
-   filter: drop-shadow(1px 1px 1px $c4);
+   filter: drop-shadow(1px 1px 1px $secondary-color);
    display: grid;
    place-items: center;
    cursor: no-drop;
@@ -12,15 +12,15 @@
       min-height: 300px;
       min-width: 450px;
       cursor: default;
-      background: $c1;
+      background: $primary-color;
       flex-direction: column;
       max-width: 95%;
       max-height: 90%;
       z-index: 999;
-      border: 4px solid $c3;
+      border: 4px solid $secondary-color;
       overflow-y: auto;
       gap: 0;
-      color: $c2;
+      color: $background-color;
 
 
       header {
@@ -31,9 +31,9 @@
          justify-content: space-between;
          align-items: center;
          padding: 1em;
-         border-bottom: 4px solid $c3;
+         border-bottom: 4px solid $secondary-color;
          outline-offset: 0px;
-         background: $c5;
+         background: $background-color;
 
          z-index: 11;
       }

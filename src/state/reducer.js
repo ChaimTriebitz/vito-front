@@ -5,7 +5,7 @@ export const reducer = (state, action) => {
       case ACTIONS.REFRESH_DATA:
          return { ...state, refreshCount: state.refreshCount + 1, }
       case ACTIONS.SET:
-         return { ...state, [action.entity]: action.payload, }
+         return { ...state, [action.entity]: action.payload }
       case ACTIONS.OPEN_DIALOG:
          return { ...state, dialogs: { ...state.dialogs, [action.entity]: { ...action.payload, isOpen: true } } }
       case ACTIONS.CLOSE_DIALOG:

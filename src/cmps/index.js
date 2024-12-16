@@ -26,6 +26,7 @@ import { Remove } from './table/Remove.jsx'
 import { SelectRow } from './table/SelectRow.jsx'
 import { Details } from './table/Details.jsx'
 import { Notes } from './table/Notes.jsx'
+import { SortHeader } from './table/SortHeader.jsx'
 
 // DIALOG
 import { Dialogs } from './dialogs/Dialogs.jsx'
@@ -57,6 +58,7 @@ export {
    Register,
    Login,
    // TABLE
+   SortHeader,
    Table,
    Cells,
    Text,

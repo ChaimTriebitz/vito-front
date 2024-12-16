@@ -18,11 +18,11 @@
 }
 
 ::-webkit-scrollbar-track {
-   background: $c2;
+   background: $secondary-color;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: $c1;
+   background: $warning-color;
    border-radius: 5px;
 }
 

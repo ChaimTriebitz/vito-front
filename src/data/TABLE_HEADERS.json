@@ -81,19 +81,22 @@
             },
             {
                "cell_type": "remove",
-               "msg":"lender"
+               "msg": "lender"
             }
          ]
       },
       {
          "name": "Lender",
          "internal_name": "lender",
-         "cell_type": "text"
+         "cell_type": "text",
+         "sort_by": "lender",
+         "default_sort": "asc"
       },
       {
          "name": "type",
          "internal_name": "type",
-         "cell_type": "categories"
+         "cell_type": "categories",
+         "sort_by": "type"
       },
       {
          "name": "Deal Size",

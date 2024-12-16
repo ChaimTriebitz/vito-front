@@ -2,17 +2,28 @@ import React from 'react'
 import { Cells } from './Cells'
 import { useGlobalState } from '../../hooks';
 import { SEARCH } from '../../data';
+import { SortHeader } from '..';
 
 export const Table = ({ headers = [], rows = [] }) => {
-   
+
+   const { isDataLoading } = useGlobalState()
 
    return (
       <div className="table-container">
+         {isDataLoading && < div className='loader' id='sandwatchloader' />}
+
          <table>
             <thead>
                <tr>
                   {
-                     headers.map(header => <th key={header.name}>{header.name}</th>)
+                     headers.map(header =>
+                        <th key={header.name}>
+                           <div className="th-container">
+                              <p>{header.name}</p>
+                              {header.sort_by && <SortHeader header={header} />}
+                           </div>
+                        </th>
+                     )
                   }
                </tr>
             </thead>

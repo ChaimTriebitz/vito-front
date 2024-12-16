@@ -6,11 +6,11 @@
    position: relative;
 
    &.success {
-      background: $c-success;
+      background: $success-color;
    }
 
    &.danger {
-      background: $c-danger;
+      background: $error-color;
    }
 }
 

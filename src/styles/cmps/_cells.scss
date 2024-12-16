@@ -9,9 +9,9 @@ td {
          min-height: 23px;
          height: 23px;
          width: 23px;
-         outline: 2px solid $c6;
+         outline: 2px solid $highlight-color;
          outline-offset: -2px;
-         background: $c3;
+         background: $secondary-color;
          cursor: pointer;
       }
    }

@@ -5,7 +5,7 @@
 
    .error {
       text-align: center;
-      color: $c-danger;
+      color: $error-color;
       height: 1.5em;
    }
 
@@ -18,7 +18,7 @@
 
       .multi-select {
          flex-direction: column;
-         background: $c5;
+         background: $secondary-color;
          padding: 0.5em;
 
          .multi-select-item {
@@ -29,7 +29,7 @@
 
 
       label {
-         color: $c6;
+         color: $highlight-color;
          flex: 1;
       }
 
