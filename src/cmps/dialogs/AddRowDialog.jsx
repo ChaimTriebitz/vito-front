@@ -1,11 +1,11 @@
 import React from 'react'
 import { useDialog, useForm, useGlobalState } from '../../hooks'
-import { svgs } from '../../assets/svgs'
-import { DIALOG_FIELDS } from '../../data';
-import { toastMsg, objects } from '../../functions';
-import { create } from '../../controllers';
-import { Inputs } from '../../cmps';
-import { ACTIONS } from '../../state';
+import { svgs } from '../../assets'
+import { DIALOG_FIELDS } from '../../data'
+import { toastMsg, objects } from '../../functions'
+import { create } from '../../controllers'
+import { Inputs } from '../../cmps'
+import { ACTIONS } from '../../state'
 
 export const AddRowDialog = () => {
    const { page, dispatch } = useGlobalState()
@@ -15,10 +15,10 @@ export const AddRowDialog = () => {
 
    const handleSave = () => {
       create.data(values, page)
-         .then((res) => toastMsg.success(res.data.message))
+         .then((data) => toastMsg.success(data.message))
          .then(() => dispatch({ type: ACTIONS.REFRESH_DATA }))
          .then(closeDialog)
-         .catch((err) => toastMsg.error(err.response.data.message))
+         .catch((data) => toastMsg.error(data.message))
    }
 
    return (
@@ -32,15 +32,17 @@ export const AddRowDialog = () => {
                </section>
             </header>
             <main className='form'>
-               {DIALOG_FIELDS[page].map(field =>
-                  <Inputs
-                     key={field.internal_name}
-                     value={values[field.internal_name]}
-                     field={field}
-                     handleChange={handleChange}
-                     options={field.options}
-                  />
-               )}
+               {
+                  DIALOG_FIELDS[page].map(field =>
+                     <Inputs
+                        key={field.internal_name}
+                        value={values[field.internal_name]}
+                        field={field}
+                        handleChange={handleChange}
+                        options={field.options}
+                     />
+                  )
+               }
             </main>
          </div>
       </dialog>

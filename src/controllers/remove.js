@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { URLS } from '../data';
+import axios from 'axios'
+import { URLS } from '../data'
 
 export const remove = {
    data,
@@ -12,9 +12,9 @@ async function data(id,page) {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`
          }
-      });
-      return res;
+      })
+      return res
    } catch (err) {
-      console.error(err);
+      console.error(err)
    }
 }

@@ -1,4 +1,4 @@
-import { svgs } from '../../assets/svgs'
+import { svgs } from '../../assets'
 import { remove } from '../../controllers'
 import { useGlobalState } from '../../hooks'
 import { ACTIONS } from '../../state'

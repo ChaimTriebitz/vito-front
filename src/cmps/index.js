@@ -38,6 +38,8 @@ import { ConfirmDialog } from './dialogs/ConfirmDialog.jsx'
 import { ActionsBar } from './actions-bar/ActionsBar.jsx'
 import { AddRow } from './actions-bar/AddRow.jsx'
 import { Search } from './actions-bar/Search.jsx'
+import { InsertData } from './actions-bar/InsertData.jsx'
+import { InsertXlFile } from './actions-bar/InsertXlFile.jsx'
 
 export {
    Msg,
@@ -45,6 +47,8 @@ export {
    Main,
    Footer,
    // ACTIONS-BAR
+   InsertXlFile,
+   InsertData,
    ActionsBar,
    AddRow,
    Search,

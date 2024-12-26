@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDialog, useForm, useGlobalState } from '../../hooks'
-import { svgs } from '../../assets/svgs'
+import { svgs } from '../../assets'
 import { DIALOG_FIELDS } from '../../data';
 import { Inputs } from '../../cmps';
-import { objects, toastMsg } from '../../functions';
+import { events, objects, toastMsg } from '../../functions';
 import { get, update } from '../../controllers';
 import { ACTIONS } from '../../state';
 
@@ -18,10 +18,10 @@ export const DetailsDialog = () => {
 
    const handleSave = () => {
       update.data(row._id, values, page)
-         .then((res) => toastMsg.success(res.data.message))
+         .then((res) => events.showMsg.success(res.message))
          .then(() => dispatch({ type: ACTIONS.REFRESH_DATA }))
          .then(closeDialog)
-         .catch((err) => toastMsg.error(err.response.data.message))
+         .catch((err) => events.showMsg.error(err.message))
    }
 
    return (

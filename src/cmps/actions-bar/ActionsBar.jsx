@@ -3,7 +3,7 @@ import { useGlobalState, useUpdateEffect } from '../../hooks'
 import { FILTERS } from '../../data'
 import { Select } from '../inputs/Select'
 import { ACTIONS } from '../../state'
-import { AddRow, MultiSelect, Search } from '..'
+import { AddRow, InsertData, MultiSelect, Search } from '..'
 
 export const ActionsBar = () => {
    const [value, setValue] = useState('')
@@ -26,6 +26,7 @@ export const ActionsBar = () => {
             value={value}
             handleChange={handleChange}
          /> */}
+         <InsertData />
          <Search />
          <AddRow />
       </div>

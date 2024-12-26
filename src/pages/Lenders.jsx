@@ -4,21 +4,12 @@ import { get } from '../controllers'
 import { ACTIONS } from '../state'
 import { ActionsBar, Table } from '../cmps'
 import { TABLE_HEADERS } from '../data'
+import { arrays } from '../functions'
 
 export const Lenders = () => {
-   
-   const { dispatch, lenders, refreshCount, search, sort } = useGlobalState()
 
-   const rows = lenders.filter(item =>
-      (item.email && item.contact.toLowerCase().includes(search)) ||
-      (item.lender && item.lender.toLowerCase().includes(search))
-   ).sort((a, b) => {
-      const fieldA = a[sort.by]
-      const fieldB = b[sort.by]
-      if (fieldA === fieldB || !sort.by || !sort.dir) return 0
-      if (fieldA < fieldB) return sort.dir === 'asc' ? -1 : 1
-      if (fieldA > fieldB) return sort.dir === 'asc' ? 1 : -1
-   })
+   const { dispatch, lenders, refreshCount, search, sort } = useGlobalState()
+   const rows = arrays.sortBy(arrays.filterObjects(lenders, ['contact', 'lender'], search), sort.by, sort.dir)
 
    useEffect(() => {
       get.data('lenders')

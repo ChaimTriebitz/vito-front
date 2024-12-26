@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { svgs } from '../assets/svgs'
-import { msgEvent } from '../functions/toastMsg'
+import { svgs } from '../assets'
+// import { msgEvent } from '../functions/toastMsg'
+import { events } from '../functions'
 
 
 export const Msg = () => {
@@ -9,7 +10,7 @@ export const Msg = () => {
    const [isHidden, setIsHidden] = useState(true)
 
    useEffect(() => {
-      let removeEvent = msgEvent.on('show-msg', (msg) => {
+      let removeEvent = events.listen('show-msg', (msg) => {
          setMsg(msg)
          setIsHidden(false)
          hideMsg(5000)

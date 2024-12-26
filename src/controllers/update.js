@@ -13,9 +13,9 @@ async function data(id, data,page) {
             "Authorization": `Bearer ${localStorage.getItem('vito')}`
          }
       });
-      return res;
+      return res.data;
    } catch (err) {
       console.error(err);
-      throw err;
+      throw err.response.data;
    }
 }

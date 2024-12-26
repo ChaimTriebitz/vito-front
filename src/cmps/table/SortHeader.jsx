@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { svgs } from '../../assets/svgs'
+import { svgs } from '../../assets'
 import { useGlobalState, useUpdateEffect } from '../../hooks'
 import { ACTIONS } from '../../state'
 
