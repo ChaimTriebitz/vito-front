@@ -1,13 +1,11 @@
 export const events = {
    listen,
-   showMsg:{
-      success: (txt) => _showMsg(txt, 'success'),
-      error: (txt) => _showMsg(txt, 'error'),
-      warning: (txt) => _showMsg(txt, 'warning')
+   showMsg: {
+      success: (txt) => _emit('show-msg', { txt, type: 'success' }),
+      error: (txt) => _emit('show-msg', { txt, type: 'error' }),
+      warning: (txt) => _emit('show-msg', { txt, type: 'warning' }),
    }
 }
-
-
 
 function listen(eventName, listener) {
 
@@ -26,10 +24,5 @@ function _emit(eventName, data) {
    window.dispatchEvent(new CustomEvent(eventName, { detail: data }))
 }
 
-function _showMsg(txt, type = '') {
-   _emit('show-msg', { txt, type })
-}
-// const showMsg = {
 
-// }
 

@@ -4,7 +4,7 @@ import { get } from '../controllers'
 import { ACTIONS } from '../state'
 import { ActionsBar, Table } from '../cmps'
 import { TABLE_HEADERS } from '../data'
-import { arrays } from '../functions'
+import { arrays, toastMsg } from '../functions'
 
 export const Lenders = () => {
 
@@ -14,7 +14,8 @@ export const Lenders = () => {
    useEffect(() => {
       get.data('lenders')
          .then((res) => dispatch({ type: ACTIONS.SET, entity: 'lenders', payload: res.data }))
-         .then(() => dispatch({ type: ACTIONS.SET, entity: 'isDataLoading', payload: false }))
+         .catch((error)=>toastMsg.error(error.response.data.error))
+         .finally(() => dispatch({ type: ACTIONS.SET, entity: 'isDataLoading', payload: false }))
    }, [refreshCount])
 
    return (

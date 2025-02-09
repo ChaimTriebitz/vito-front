@@ -1,13 +1,15 @@
 import axios from 'axios';
-import { URLS } from '../data';
+import { urls } from '../config';
 
 export const get = {
    data,
 }
 
 async function data(page) {
+   console.log(page);
+   
    try {
-      const res = await axios.get(`${URLS.base}${URLS[page].get}`, {
+      const res = await axios.get(urls?.[page]?.get, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`
@@ -15,7 +17,7 @@ async function data(page) {
       })
       return res.data
    } catch (err) {
-      console.error(err);
+      throw err
    }
 };
 

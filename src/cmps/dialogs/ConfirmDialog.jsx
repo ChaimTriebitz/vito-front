@@ -1,3 +1,4 @@
+import { toastMsg } from '../../functions';
 import { useDialog, useGlobalState } from '../../hooks';
 import { ACTIONS } from '../../state';
 
@@ -8,7 +9,10 @@ export const ConfirmDialog = () => {
    const { closeDialog, dialogRef } = useDialog('confirm')
 
    const handleClick = (confirm) => {
-      confirm && action().then(() => dispatch({ type: ACTIONS.REFRESH_DATA }))
+      confirm && action()
+      .then(() => dispatch({ type: ACTIONS.REFRESH_DATA }))
+      .catch((error) => toastMsg.error(error.response.data.message)
+      )
       closeDialog()
    }
    return (

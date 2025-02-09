@@ -5,7 +5,7 @@ import { useGlobalState } from '../hooks';
 import { ACTIONS } from '../state';
 
 const links = [
-   // { name: 'Banks', link: '/banks' },
+   { name: 'Banks', link: '/banks' },
    { name: 'Lenders', link: '/lenders' },
 ]
 
@@ -16,9 +16,10 @@ export const Header = () => {
    useEffect(() => {
       dispatch({ type: ACTIONS.SET, entity: 'page', payload: pathname.replace(/^\/+/, '') })
    }, [pathname])
+
    return (
       <header className='header'>
-         <img className='logo' src={logo} alt="company logo" />
+         {/* <img className='logo' src={logo} alt="company logo" /> */}
          <nav className='nav'>
             {
                links.map(link =>

@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import axios from 'axios'
-import { Link, useNavigate } from 'react-router-dom'
-import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
-import { URLS } from '../../data'
+import { useDialog, useForm, useLogInUser } from '../../hooks'
+import { urls } from '../../config'
 
 export const Login = () => {
    const { dialogRef, closeDialog } = useDialog('login')
    const { values, handleChange } = useForm({ username: '', password: '' })
-
 
    const login = useLogInUser()
    const [err, setErr] = useState('')
@@ -17,7 +15,7 @@ export const Login = () => {
       e.preventDefault()
 
       try {
-         const { data } = await axios.post(`${URLS.base}${URLS.auth.login}`, { ...values })
+         const { data } = await axios.post(urls.auth.login, { ...values })
          if (data.success) {
             localStorage.setItem('vito', data.token)
             login()

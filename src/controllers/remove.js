@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { URLS } from '../data'
+import { urls } from '../config'
 
 export const remove = {
    data,
@@ -7,7 +7,7 @@ export const remove = {
 
 async function data(id,page) {
    try {
-      const res = await axios.delete(`${URLS.base}${URLS[page].remove}/${id}`, {
+      const res = await axios.delete(`${urls?.[page]?.remove}/${id}`, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`
@@ -15,6 +15,6 @@ async function data(id,page) {
       })
       return res
    } catch (err) {
-      console.error(err)
+      throw err
    }
 }

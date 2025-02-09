@@ -29,7 +29,7 @@ export const Main = () => {
    if (!loggedInUser && !tok) return
    return (
       <Routes>
-         {/* <Route  path='/banks' element={<Banks />}/> */}
+         <Route  path='/banks' element={<Banks />}/>
          <Route  path='/lenders' element={<Lenders />}/>
       </Routes>
    )

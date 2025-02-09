@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { URLS } from '../data';
+import { urls } from '../config';
 
 export const update = {
    data,
@@ -7,7 +7,7 @@ export const update = {
 
 async function data(id, data,page) {
    try {
-      const res = await axios.put(`${URLS.base}${URLS[page].update}/${id}`, data, {
+      const res = await axios.put(`${urls?.[page]?.update}/${id}`, data, {
          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem('vito')}`

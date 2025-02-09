@@ -4,7 +4,7 @@ export const arrays = {
 }
 
 function filterObjects(data = [], fields = [], search) {
-   return data.filter(d => fields.some(f => d[f].toLowerCase().includes(search)))
+   return data.filter(d => fields.some(f => d[f]?.toLowerCase().includes(search?.toLowerCase())))
 }
 
 function sortBy(data = [], by = '', dir) {
