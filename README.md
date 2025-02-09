@@ -2,8 +2,8 @@
 
 This is a React-based web application that allows users to edit and manage a table of contents. Users can manually edit entries and insert rows from Excel sheets. The application is hosted on Render.com.
 
-## Live Demo
-[View the app](https://vito-front.onrender.com)
+## Live Demo 🚀
+[➡️ Try it out now!](https://vito-front.onrender.com)
 
 ## Features
 - **Edit Table Rows**: Modify existing rows directly in the UI.
