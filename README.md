@@ -19,6 +19,7 @@ This is a React-based web application that allows users to edit and manage a tab
 - Click on a row to edit its content.
 - Use the "Import Excel" button to upload a sheet and insert rows.
 - Save your changes for future use.
+- use for username **baba** password **babababa** or create a new one.
 
 
 
