@@ -28,5 +28,4 @@ export const useForm = (initValues) => {
       restart,
       isValuesChanged: !objects.isEmpty(changedValues)
    }
-
 }

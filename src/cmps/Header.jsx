@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import logo from '../assets/imgs/logo-vito.png';
+import logo from '../assets/imgs/logo1.webp';
 import { useEffect } from 'react';
 import { useGlobalState } from '../hooks';
 import { ACTIONS } from '../state';
@@ -19,7 +19,8 @@ export const Header = () => {
 
    return (
       <header className='header'>
-         {/* <img className='logo' src={logo} alt="company logo" /> */}
+         <img className='logo' src={logo} alt="company logo" />
+         {/* <div className="logo">Table of Contents Editor</div> */}
          <nav className='nav'>
             {
                links.map(link =>
