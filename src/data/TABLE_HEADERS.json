@@ -11,7 +11,8 @@
                "cell_type": "details"
             },
             {
-               "cell_type": "remove"
+               "cell_type": "remove",
+               "msg": "bank"
             }
          ]
       },

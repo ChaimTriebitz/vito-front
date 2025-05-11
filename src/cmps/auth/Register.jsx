@@ -5,7 +5,6 @@ import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
 import { urls } from '../../config'
 
 export const Register = () => {
-   const { dispatch } = useGlobalState()
    const login = useLogInUser()
    const { dialogRef, closeDialog } = useDialog('register')
    const { values, handleChange } = useForm({ username: '', email: '', password: '', })

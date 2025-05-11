@@ -5,6 +5,8 @@ import { ACTIONS } from '../../state'
 
 
 export const Remove = ({ row, header }) => {
+   console.log(header);
+   
    const { dispatch, page } = useGlobalState()
 
    const handleRemove = () => {
