@@ -3,6 +3,16 @@
    gap: 1em;
    padding: 1em;
 
+   .input {
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+         background: $secondary-color;
+      }
+
+   }
+
    .error {
       text-align: center;
       color: $error-color;
@@ -37,7 +47,7 @@
          width: 0%;
          flex-basis: 75%;
          background: $secondary-color;
-         
+
       }
    }
 }

@@ -16,9 +16,14 @@
       .link {
          display: flex;
          align-items: center;
-         color: $background-color;
+         color: white;
          font-size: 1.1em;
-         text-decoration: underline;
+         font-weight: 600;
+         text-decoration: none;
+         &.active {
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+         }
       }
    }
 }

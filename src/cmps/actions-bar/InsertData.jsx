@@ -232,7 +232,7 @@ export const InsertData = () => {
 
       const  t2 = t1.map(t=>({...t,type:t.type?.split(',')?.map(str => str?.trim())}))
 
-      create.manyData(t2,page)
+      create.manyData(t2,page).catch(err => console.log(err))
 
       console.log(t2.map(t=>t.type));
       
@@ -245,7 +245,7 @@ export const InsertData = () => {
             accept=".xlsx, .xls"
             onChange={handleFileUpload}
          />
-         {/* <button onClick={handleClick}>Insert</button> */}
+         <button className='btn by' onClick={handleClick}>Insert</button>
       </div>
    )
 }

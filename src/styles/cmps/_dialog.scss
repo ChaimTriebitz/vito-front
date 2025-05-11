@@ -10,7 +10,7 @@
 
    .dialog-content {
       min-height: 300px;
-      min-width: 450px;
+      min-width: 250px;
       cursor: default;
       background: $primary-color;
       flex-direction: column;
@@ -20,7 +20,7 @@
       border: 4px solid $secondary-color;
       overflow-y: auto;
       gap: 0;
-      color: $background-color;
+      color: white;
 
 
       header {

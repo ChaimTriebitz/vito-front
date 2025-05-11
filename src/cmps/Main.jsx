@@ -17,16 +17,10 @@ export const Main = () => {
       }
    }, [loggedInUser])
 
-   // useEffect(() => {
-   //    if (!tok) {
-   //       dispatch({ type: ACTIONS.OPEN_DIALOG, entity: 'register' })
-   //    }
-   //    if (tok) {
-   //       dispatch({ type: ACTIONS.CLOSE_DIALOG, entity: 'register' })
-   //    }
-   // }, [loggedInUser])
+
 
    if (!loggedInUser && !tok) return
+
    return (
       <Routes>
          <Route  path='/banks' element={<Banks />}/>

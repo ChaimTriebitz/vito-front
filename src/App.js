@@ -10,7 +10,6 @@ function App() {
          <Dialogs />
          <Header />
          <Main />
-         <Footer />
       </div>
    )
 }

@@ -2,6 +2,10 @@
    padding: 1em;
    background: $primary-color;
    align-items: center;
+   @media (max-width: 700px) {
+      flex-direction: column;
+      
+   }
    .search {
       background: white;
       border-radius: 5px;

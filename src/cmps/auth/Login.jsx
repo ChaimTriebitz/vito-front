@@ -1,9 +1,11 @@
-import {  useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
-import { useDialog, useForm, useLogInUser } from '../../hooks'
+import { useDialog, useForm, useGlobalState, useLogInUser } from '../../hooks'
 import { urls } from '../../config'
+import { ACTIONS } from '../../state'
 
 export const Login = () => {
+   const { dispatch } = useGlobalState()
    const { dialogRef, closeDialog } = useDialog('login')
    const { values, handleChange } = useForm({ username: '', password: '' })
 
@@ -46,6 +48,9 @@ export const Login = () => {
                   <p className='error'>{err}</p>
                </form>
             </main>
+            <footer>
+               <p>Don't have an account? <span onClick={() => { closeDialog(); dispatch({ type: ACTIONS.OPEN_DIALOG, entity: 'register' }) }}>Register</span></p>
+            </footer>
          </div>
       </dialog>
    )

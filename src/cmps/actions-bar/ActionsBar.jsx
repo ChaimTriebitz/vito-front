@@ -26,7 +26,7 @@ export const ActionsBar = () => {
             value={value}
             handleChange={handleChange}
          /> */}
-         <InsertData />
+         {/* <InsertData /> */}
          <Search />
          <AddRow />
       </div>
